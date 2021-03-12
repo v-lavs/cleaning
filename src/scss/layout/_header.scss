@@ -93,7 +93,7 @@
   .btn-close {
     display: none;
     right: 20px;
-    top: 37px;
+    top: 25px;
   }
 
   .phone_mob {
@@ -121,9 +121,9 @@
       }
     }
     .header__nav {
-      padding: 140px 20px 150px;
+      padding: 80px 20px;
       position: fixed;
-      left: 0;
+      //left: 0;
       right: 0;
       top: 0;
       bottom: 0;
@@ -133,9 +133,10 @@
       overflow-y: auto;
       text-align: center;
       transition: transform .5s;
-      transform: translateX(-100%);
+      transform: translateX(100%);
       z-index: 999;
-
+      max-width: 380px;
+      width: 100%;
       &.open {
         transform: translateX(0);
       }
@@ -148,7 +149,12 @@
         &__item {
           margin-bottom: 15px;
           width: 100%;
-
+          border-radius: 10px;
+          flex: 0;
+          line-height: .9;
+          &:before{
+            display: none;
+          }
           &:last-child {
             margin-bottom: 0;
           }
@@ -181,7 +187,6 @@
 }
 
 
-
 .backdrop {
   display: none;
   position: fixed;
@@ -191,5 +196,5 @@
   bottom: 0;
   background: $darkslateblue;
   opacity: 0.8;
-  z-index: 500;
+  z-index: 600;
 }

@@ -30,4 +30,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  @include respond-to($xs){
+    height: 43px;
+    padding-top: 0;
+    padding-right: 30px;
+    &:after{
+      height: 9px;
+      width: 8px;
+      margin-top: -8px;
+    }
+  }
 }

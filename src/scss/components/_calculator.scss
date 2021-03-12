@@ -63,4 +63,7 @@
       margin-bottom: 5px;
     }
   }
+  @include respond-to($xs) {
+      padding: 24px 9px 35px 14px;
+  }
 }

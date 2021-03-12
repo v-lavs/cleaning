@@ -41,6 +41,10 @@
     }
   }
 
+  .wrap-btn_mob {
+    display: none;
+  }
+
   @include respond-to($lg) {
     font-size: 12px;
     &__bg {
@@ -79,6 +83,19 @@
     .container {
       padding: 0;
     }
+    .wrap-btn_mob {
+      display: block;
+      width: 100%;
+      order: 1;
+      text-align: center;
+      padding-top: 28px;
 
+      .btn {
+        background-color: $white;
+        color: $darkslateblue;
+        font-size: 12px;
+        padding: 11px 18px;
+      }
+    }
   }
 }

@@ -102,6 +102,10 @@
       height: 47px;
     }
   }
+  .btn-close{
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @include respond-to($sm) {
