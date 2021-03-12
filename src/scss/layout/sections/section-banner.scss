@@ -49,14 +49,19 @@
       }
     }
   }
+  @include respond-to($md) {
+    padding-top: 174px;
+  }
   @include respond-to($sm) {
     background-position: right 30% top;
+    padding-top: 114px;
     .container {
       padding: 0;
     }
     .banner {
-      min-height: 276px;
+      min-height: 320px;
       padding: 58px 20px;
+      border-radius: 0;
 
       &__slogan {
         font-size: 32px;

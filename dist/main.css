@@ -649,7 +649,7 @@ body.modal-open {
   width: 32px;
   height: 32px;
   top: 25%;
-  right: 8%;
+  right: 0;
   border-radius: 50%;
   background-color: #384996;
 }
@@ -1299,18 +1299,19 @@ body.modal-open {
   border: none;
   background-color: transparent;
   display: none;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   padding: 3px;
-  margin-left: 40px;
+  margin-left: 23px;
+  margin-bottom: 18px;
 }
 
 .header .btn-burger .line {
   display: block;
-  width: 18px;
-  height: 1px;
-  margin-bottom: 6px;
-  background-color: #000000;
+  width: 24px;
+  height: 2px;
+  margin-bottom: 4px;
+  background-color: #384996;
 }
 
 .header .btn-burger .line:last-child {
@@ -1321,6 +1322,10 @@ body.modal-open {
   display: none;
   right: 20px;
   top: 37px;
+}
+
+.header .phone_mob {
+  display: none;
 }
 
 .backdrop {
@@ -1479,6 +1484,10 @@ body.modal-open {
 }
 
 @media only screen and (max-width: 768px) {
+  .section-banner {
+    padding-top: 174px;
+  }
+
   .container {
     max-width: 100%;
   }
@@ -1486,6 +1495,15 @@ body.modal-open {
   .header .btn-close,
   .header .btn-burger {
     display: block;
+  }
+
+  .header .header__phone-block {
+    margin-right: 0;
+    font-size: 12px;
+  }
+
+  .header .header__top-content .btn {
+    display: none;
   }
 
   .header .header__nav {
@@ -1522,6 +1540,10 @@ body.modal-open {
 
   .header .header__nav .menu__item:last-child {
     margin-bottom: 0;
+  }
+
+  .header .header__nav .phone_mob {
+    display: block;
   }
 
   .footer .contacts {
@@ -1580,6 +1602,7 @@ body.modal-open {
 
   .section-banner {
     background-position: right 30% top;
+    padding-top: 114px;
   }
 
   .section-banner .container {
@@ -1587,8 +1610,9 @@ body.modal-open {
   }
 
   .section-banner .banner {
-    min-height: 276px;
+    min-height: 320px;
     padding: 58px 20px;
+    border-radius: 0;
   }
 
   .section-banner .banner__slogan {
@@ -1649,6 +1673,25 @@ body.modal-open {
     border-radius: 0;
   }
 
+  .header .header__top-content {
+    padding-top: 9px;
+    padding-bottom: 15px;
+  }
+
+  .header .header__logo {
+    max-width: 120px;
+  }
+
+  .header .header__phone-block {
+    line-height: 1;
+    margin-bottom: 9px;
+  }
+
+  .header .btn-burger {
+    margin-left: 18px;
+    margin-bottom: 6px;
+  }
+
   .footer {
     font-size: 12px;
   }
@@ -1693,5 +1736,9 @@ body.modal-open {
   .section-gallery .gallery__wrap-img:after {
     width: 23px;
     height: 23px;
+  }
+
+  .container {
+    padding: 0 15px;
   }
 }

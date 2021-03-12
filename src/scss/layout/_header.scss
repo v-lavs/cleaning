@@ -71,17 +71,18 @@
     border: none;
     background-color: transparent;
     display: none;
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     padding: 3px;
-    margin-left: 40px;
+    margin-left: 23px;
+    margin-bottom: 18px;
 
     .line {
       display: block;
-      width: 18px;
-      height: 1px;
-      margin-bottom: 6px;
-      background-color: #000000;
+      width: 24px;
+      height: 2px;
+      margin-bottom: 4px;
+      background-color: $darkslateblue;
 
       &:last-child {
         margin-bottom: 0;
@@ -95,6 +96,10 @@
     top: 37px;
   }
 
+  .phone_mob {
+    display: none;
+  }
+
   @include respond-to($lg) {
     &__logo {
       width: 168px;
@@ -106,7 +111,15 @@
     .btn-burger {
       display: block;
     }
-
+    .header__phone-block {
+      margin-right: 0;
+      font-size: 12px;
+    }
+    .header__top-content {
+      .btn {
+        display: none;
+      }
+    }
     .header__nav {
       padding: 140px 20px 150px;
       position: fixed;
@@ -141,9 +154,33 @@
           }
         }
       }
+
+      .phone_mob {
+        display: block;
+      }
+    }
+  }
+
+  @include respond-to($sm) {
+    .header__top-content {
+      padding-top: 9px;
+      padding-bottom: 15px;
+    }
+    .header__logo {
+      max-width: 120px;
+    }
+    .header__phone-block {
+      line-height: 1;
+      margin-bottom: 9px;
+    }
+    .btn-burger {
+      margin-left: 18px;
+      margin-bottom: 6px;
     }
   }
 }
+
+
 
 .backdrop {
   display: none;
