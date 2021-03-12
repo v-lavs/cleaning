@@ -1,0 +1,91 @@
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  transition: .35s;
+  border: 1px solid;
+  font-size: 16px;
+  color: $white;
+  border-radius: 10px;
+  min-width: 160px;
+  font-family: $main-font;
+  font-weight: 700;
+
+  &_main {
+    background-color: $darkslateblue;
+    border-color: $darkslateblue;
+    line-height: .9;
+    letter-spacing: -.2%;
+
+
+  }
+
+  &_medium {
+    font-size: 14px;
+    padding: .83em;
+  }
+
+  &_big {
+    padding: 1.2em 1.6em;
+  }
+
+  &_glass {
+    background-color: transparent;
+    border-color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $lightskyblue;
+    border-color: $lightskyblue;
+    color: $dark;
+  }
+
+}
+
+.load-more {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin: 0 auto;
+
+  .icon {
+    position: relative;
+    background: $darkslateblue;
+    display: inline-block;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      background-image: url(../assets/img/svg/right-arrow.svg);
+      width: 20px;
+      height: 20px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      z-index: 1;
+    }
+  }
+}
+
+.btn-close {
+  position: absolute;
+  border: none;
+  background-color: $darkslateblue;
+  background-image: url(../assets/img/svg/close.svg);
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px 24px;
+}
+

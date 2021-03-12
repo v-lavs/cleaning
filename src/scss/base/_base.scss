@@ -1,0 +1,54 @@
+:root{
+  font-size: 16px;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+body {
+  font: 400 1em $main-font;
+  color: $dark;
+  &.modal-open {
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+.hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.section{
+  padding-bottom: 42px;
+  &__title{
+    text-align: center;
+    margin-bottom: 42px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.22;
+  }
+}
+.dynamic-content {
+  p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 1.25em;
+  }
+
+}
+
+
+
+
+
+
+
+

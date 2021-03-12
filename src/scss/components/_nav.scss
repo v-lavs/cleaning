@@ -1,0 +1,41 @@
+.menu {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  &__item {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    background-color: $lightskyblue;
+    transition: background-color .35s, color .35s;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 2px;
+      background-image: linear-gradient(to right, #F9FBFF 50%, #D6E3FF 50%);
+    }
+
+    &:last-child:before {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $darkslateblue;
+      color: $white;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 26px 0;
+  }
+}

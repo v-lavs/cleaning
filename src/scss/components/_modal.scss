@@ -1,0 +1,97 @@
+.modal {
+  max-width: 576px;
+  width: 100%;
+  min-height: 380px;
+  background-color: $lightskyblue;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity .5s linear;
+  overflow: hidden;
+
+  &.modal_active {
+    overflow: visible;
+    overflow-y: auto;
+    opacity: 1;
+    z-index: 1100;
+  }
+
+  &__header {
+    background-color: $white;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.05em;
+    color: #14213D;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+  }
+
+  &__body {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  &__timer {
+    margin: 0 auto;
+  }
+
+  &__description {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    padding-top: 45px;
+    text-align: center;
+  }
+
+  .information {
+    margin-bottom: 20px;
+  }
+
+  .link {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .btn-close {
+    top: 20px;
+    right: 20px;
+  }
+
+
+  .btn_main {
+    width: 100%;
+  }
+
+  .thank-you {
+    display: none;
+
+    color: #14213D;
+    font-size: 16px;
+    line-height: 1.89;
+    justify-content: center;
+    align-items: center;
+    min-height: 210px;
+    width: 100%;
+
+    &__text {
+      text-align: center;
+    }
+  }
+
+  @include respond-to($xs) {
+    //padding: 30px 20px 85px;
+    .modal__header {
+      //margin-bottom: 58px;
+    }
+  }
+}

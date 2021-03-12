@@ -1,0 +1,53 @@
+.calculator {
+  background-color: $lightskyblue;
+  padding: 72px 45px 60px;
+  border-radius: 10px;
+  display: flex;
+
+  select {
+    display: none;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__form-footer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn_submit {
+    text-align: center;
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+
+  &__form-group {
+    display: inline-flex;
+    flex-direction: column;
+    padding-bottom: 55px;
+    width: 19.5%;
+    flex-grow: 1;
+  }
+
+  .label {
+    margin-bottom: 13px;
+    line-height: 1.5;
+  }
+
+  .input {
+    font-family: inherit;
+    font-size: 16px;
+    padding: 18px;
+    line-height: 1;
+    border: 1px solid #dce2e8;
+    border-radius: 10px;
+  }
+
+  ::placeholder {
+    color: #8f8f8f;
+    font-weight: 400;
+  }
+
+}

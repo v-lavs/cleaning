@@ -1,0 +1,28 @@
+.section-faq {
+  .accordion {
+    background-color: $lightskyblue;
+    padding: 80px 13% 40px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .panel__title{
+    color: $dark;
+  }
+  .block-hiden{
+    position: relative;
+    margin-top: 35px;
+    padding-top: 40px;
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      height: 2px;
+      width: 300vw;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      z-index: 1;
+      background-image: linear-gradient(#F9FBFF 50%, #D6E3FF 50%);
+    }
+  }
+}

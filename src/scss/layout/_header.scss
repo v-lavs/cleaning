@@ -1,0 +1,151 @@
+.header {
+  //position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 550;
+  background-color: $white;
+  line-height: 1.28;
+  color: $darkslateblue;
+  padding-bottom: 15px;
+  //transition: .35s linear;
+  //transform: translateY(0);
+
+  //&.header_active {
+  //  transform: translateY(-100%);
+  //}
+
+  &__top-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 24px;
+    padding-bottom: 30px;
+  }
+
+  .btn_main {
+    margin-bottom: 15px;
+  }
+
+  &__logo {
+    width: 230px;
+    height: auto;
+    display: block;
+    margin-right: auto;
+  }
+
+  &__phone-block {
+    margin-right: 46px;
+    margin-bottom: 15px;
+    color: $darkslateblue;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -.2%;
+    line-height: 1.33;
+  }
+
+  .phone-link {
+    display: block;
+    margin-bottom: 6px;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .btn-burger {
+    border: none;
+    background-color: transparent;
+    display: none;
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    margin-left: 40px;
+
+    .line {
+      display: block;
+      width: 18px;
+      height: 1px;
+      margin-bottom: 6px;
+      background-color: #000000;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .btn-close {
+    display: none;
+    right: 20px;
+    top: 37px;
+  }
+
+
+  @include respond-to($md) {
+    .btn-close,
+    .btn-burger {
+      display: block;
+    }
+
+    .header__nav {
+      padding: 140px 20px 150px;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      flex-direction: column;
+      background-color: $white;
+      max-height: 100%;
+      overflow-y: auto;
+      text-align: center;
+      transition: transform .5s;
+      transform: translateX(-100%);
+      z-index: 999;
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      .menu {
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 18px;
+
+        &__item {
+          margin-bottom: 15px;
+          width: 100%;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $darkslateblue;
+  opacity: 0.8;
+  z-index: 500;
+}

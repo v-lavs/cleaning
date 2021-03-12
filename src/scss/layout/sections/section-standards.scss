@@ -1,0 +1,29 @@
+.section-standards {
+  .standards__list {
+    width: 95%;
+    max-width: 1090px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .standards-card {
+    width: 25%;
+    padding: 28px 10px 0;
+    text-align: center;
+
+    &__bg-icon {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      min-height: 126px;
+      margin-bottom: 37px;
+    }
+
+    &__title {
+      color: $darkslateblue;
+      margin-bottom: 25px;
+      min-height: 46px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.title {
+  font-weight: 700;
+  font-size: 48px;
+
+  &_big {
+    font-size: 72px;
+  }
+
+  &_middle {
+    font-size: 1.375rem;
+    line-height: 1.23;
+    font-weight: 700;
+  }
+
+  @include respond-to($md) {
+
+  }
+
+  @include respond-to($sm) {
+
+  }
+
+  @include respond-to($xs) {
+
+  }
+}
+
