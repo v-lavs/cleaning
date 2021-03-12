@@ -26,4 +26,33 @@
       min-height: 46px;
     }
   }
+  @include respond-to($md){
+    .standards__list{
+      flex-wrap: wrap;
+    }
+    .standards-card{
+      width: 50%;
+    }
+  }
+  @include respond-to($xs){
+    .standards__list{
+      justify-content: center;
+    }
+    .standards-card{
+      width: 100%;
+      max-width: 253px;
+      padding-top: 22px;
+      &__bg-icon{
+        min-height: 70px;
+        margin-bottom: 15px;
+      }
+      .title_middle{
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .standards__text{
+        font-size: 12px;
+      }
+    }
+  }
 }

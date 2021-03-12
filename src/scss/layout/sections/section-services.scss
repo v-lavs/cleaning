@@ -116,6 +116,7 @@
     }
   }
 
+
   @include respond-to($sm) {
     .services__item {
       width: 100%;

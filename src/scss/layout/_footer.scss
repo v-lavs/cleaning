@@ -50,13 +50,9 @@
       max-width: 147px;
     }
   }
-  @include respond-to($md) {
-    .contacts {
-      font-size: 14px;
-    }
-  }
+
   @include respond-to($sm) {
-    font-size: 12px;
+    font-size: 10px;
     &__bg {
       padding: 15px 20px;
       flex-wrap: wrap;
