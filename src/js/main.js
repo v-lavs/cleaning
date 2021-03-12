@@ -108,12 +108,23 @@ $(document).ready(function () {
 
     //SWIPER-SLIDER
     let swiperGallery = new Swiper('.gallery__slider', {
-        slidesPerView: 3,
-        spaceBetween: 20,
+        slidesPerView: 2,
+        spaceBetween: 10,
         navigation: {
             nextEl: '.gallery .swiper-button-next',
             prevEl: '.gallery .swiper-button-prev',
         },
+        breakpoints: {
+            576:{
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+
+        }
     });
 
     let keys = ['Кімната', 'Кухня', ' Передпокій', 'Санвузол', 'Лоджія'];

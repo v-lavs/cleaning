@@ -36,3 +36,21 @@
 .swiper-button-next {
   right: 0;
 }
+@include respond-to($lg){
+  .swiper-button-next,
+  .swiper-button-prev{
+    width: 47px;
+    height: 47px;
+  }
+}
+@include respond-to($sm){
+  .swiper-button-next,
+  .swiper-button-prev{
+    width: 30px;
+    height: 30px;
+    &:before {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

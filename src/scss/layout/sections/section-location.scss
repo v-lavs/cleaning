@@ -17,4 +17,13 @@
       height: 100%;
     }
   }
+  @include respond-to($sm){
+    .container{
+      padding: 0;
+    }
+    .wrap-map{
+      padding-top: 55%;
+      border-radius: 0;
+    }
+  }
 }

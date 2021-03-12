@@ -1,35 +1,19 @@
 .section-banner {
   padding-top: 280px;
-  .banner{
-    //position: relative;
+
+  .banner {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: right 25% center;
     border-radius: 10px;
     overflow: hidden;
     background-color: #67D8F8;
     min-height: 540px;
     display: flex;
     align-items: flex-end;
-    padding-bottom: 150px;
-    //&:before{
-    //  position: absolute;
-    //  content: '';
-    //  left: 0;
-    //  right: 0;
-    //  bottom: 0;
-    //  top: 0;
-    //  display: block;
-    //  background-color: #67D8F8;
-    //  opacity: .9;
-    //  z-index: 1;
-    //}
-    &__content{
-      //position: relative;
-      //display: flex;
-      //z-index: 1;
-    }
-    &__slogan{
+    padding-bottom: 12.5%;
+
+    &__slogan {
       width: 60%;
       padding-left: 40px;
       font-size: 54px;
@@ -38,18 +22,48 @@
       align-items: center;
       padding-top: 10%;
       letter-spacing: -0.002em;
-      //padding-bottom: 30px;
-      span{
+
+      span {
         color: $white;
         font-weight: 700;
       }
     }
-    //&__wrap-img{
-    //  width: 40%;
-    //  img{
-    //    width: 80%;
-    //  }
-    //}
+  }
+
+  @include respond-to($xl) {
+    .banner {
+      &__slogan {
+        width: 70%;
+        font-size: 45px;
+      }
+    }
+  }
+  @include respond-to($lg) {
+    padding-top: 240px;
+    .banner {
+      min-height: 450px;
+      padding-bottom: 14.5%;
+
+      &__slogan {
+        font-size: 40px;
+      }
+    }
+  }
+  @include respond-to($sm) {
+    background-position: right 30% top;
+    .container {
+      padding: 0;
+    }
+    .banner {
+      min-height: 276px;
+      padding: 58px 20px;
+
+      &__slogan {
+        font-size: 32px;
+        line-height: 1;
+        padding: 0;
+      }
+    }
   }
 }
 

@@ -48,11 +48,13 @@
   .phone-link {
     display: block;
     margin-bottom: 6px;
+
     &:hover,
     &:focus {
       text-decoration: underline;
     }
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -93,6 +95,11 @@
     top: 37px;
   }
 
+  @include respond-to($lg) {
+    &__logo {
+      width: 168px;
+    }
+  }
 
   @include respond-to($md) {
     .btn-close,

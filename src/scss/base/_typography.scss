@@ -1,6 +1,6 @@
 .title {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 2rem;
 
   &_big {
     font-size: 72px;
@@ -17,7 +17,9 @@
   }
 
   @include respond-to($sm) {
-
+    &_middle {
+      font-size: 0.875rem;
+    }
   }
 
   @include respond-to($xs) {

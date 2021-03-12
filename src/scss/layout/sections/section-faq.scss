@@ -8,7 +8,7 @@
   .panel__title{
     color: $dark;
   }
-  .block-hiden{
+  .block-btn-open{
     position: relative;
     margin-top: 35px;
     padding-top: 40px;
@@ -23,6 +23,32 @@
       top: 0;
       z-index: 1;
       background-image: linear-gradient(#F9FBFF 50%, #D6E3FF 50%);
+    }
+  }
+  @include respond-to($sm){
+    .container{
+      padding: 0;
+    }
+    .accordion{
+      padding: 30px 20px 30px;
+      border-radius: 0;
+      .panel__heading{
+        padding: 13px 0;
+        cursor: pointer;
+      }
+      .open-panel{
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .block-btn-open{
+      padding-top: 25px;
+    }
+    .panel-collapse{
+      padding: 0;
+    }
+    .panel-collapse__body p{
+      font-size: 12px;
     }
   }
 }

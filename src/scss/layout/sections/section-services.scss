@@ -1,5 +1,6 @@
 .section-services {
   padding-bottom: 32px;
+
   .services {
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +11,6 @@
       width: 33.3%;
       padding: 0 10px;
       margin-bottom: 20px;
-      display: table;
       min-height: 245px;
       color: $white;
       flex-grow: 1;
@@ -18,15 +18,16 @@
 
     &__wrap-bg {
       position: relative;
-      display: table-cell;
-      vertical-align: bottom;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
       height: 100%;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-      //padding: 20px;
       overflow: hidden;
       border-radius: 10px;
+
       &:before {
         position: absolute;
         content: '';
@@ -68,6 +69,8 @@
     }
 
     &__content {
+      position: absolute;
+      width: 100%;
       padding: 0 27px 20px;
       transform: translateY(70px);
       transition: transform .5s;
@@ -75,7 +78,55 @@
 
     &__block-btn {
       display: flex;
-      justify-content: space-between;
+    }
+    .btn{
+      width: 50%;
+      max-width: 160px;
+      &_glass{
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .mob-visible {
+    display: none;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 auto;
+    color: $darkslateblue;
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  @include respond-to($lg) {
+    .services__item {
+      width: 50%;
+    }
+    .btn_glass {
+      margin-right: 4px;
+    }
+    .services__content {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+  }
+
+  @include respond-to($sm) {
+    .services__item {
+      width: 100%;
+    }
+    .mob-visible {
+      display: block;
+    }
+  }
+  @include respond-to($xs){
+    .services__item{
+      min-height: 192px;
     }
   }
 }

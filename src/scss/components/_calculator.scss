@@ -15,6 +15,7 @@
   &__form-footer {
     width: 100%;
     text-align: center;
+    padding-top: 30px;
   }
 
   .btn_submit {
@@ -26,8 +27,9 @@
   &__form-group {
     display: inline-flex;
     flex-direction: column;
-    padding-bottom: 55px;
-    width: 19.5%;
+    padding-bottom: 25px;
+    width: 100%;
+    max-width: 216px;
     flex-grow: 1;
   }
 
@@ -50,4 +52,15 @@
     font-weight: 400;
   }
 
+  @include respond-to($sm) {
+    .calculator__form-group {
+      max-width: 100%;
+    }
+    .calculator__form-group {
+      padding-bottom: 15px;
+    }
+    .label {
+      margin-bottom: 5px;
+    }
+  }
 }
