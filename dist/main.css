@@ -1731,8 +1731,9 @@ body.modal-open {
   }
 
   .calculator .btn_submit {
-    padding: 21px 12px;
+    padding: 21px;
     font-size: 14px;
+    width: 75%;
   }
 
   .calculator .input {
