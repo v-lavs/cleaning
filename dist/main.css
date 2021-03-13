@@ -1401,9 +1401,17 @@ body.modal-open {
 }
 
 @media only screen and (max-width: 1200px) {
+  .title_middle {
+    font-size: 1.25rem;
+  }
+
   .section-banner .banner__slogan {
     width: 70%;
     font-size: 45px;
+  }
+
+  .section-standards .standards-card__bg-icon {
+    min-height: 110px;
   }
 
   .container {
@@ -1468,6 +1476,14 @@ body.modal-open {
     padding-right: 14px;
   }
 
+  .section-standards .standards__list {
+    flex-wrap: wrap;
+  }
+
+  .section-standards .standards-card {
+    width: 50%;
+  }
+
   .section-gallery .gallery {
     padding: 0 60px;
   }
@@ -1501,14 +1517,6 @@ body.modal-open {
 @media only screen and (max-width: 768px) {
   .section-banner {
     padding-top: 174px;
-  }
-
-  .section-standards .standards__list {
-    flex-wrap: wrap;
-  }
-
-  .section-standards .standards-card {
-    width: 50%;
   }
 
   .container {
@@ -1711,6 +1719,20 @@ body.modal-open {
     background-color: rgba(0, 0, 0, 0.6);
   }
 
+  .section-standards .standards-card__bg-icon {
+    min-height: 70px;
+    margin-bottom: 15px;
+  }
+
+  .section-standards .standards-card .title_middle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .section-standards .standards-card .standards__text {
+    font-size: 12px;
+  }
+
   .section-gallery .gallery {
     padding: 0  37px;
   }
@@ -1834,20 +1856,6 @@ body.modal-open {
     width: 100%;
     max-width: 253px;
     padding-top: 22px;
-  }
-
-  .section-standards .standards-card__bg-icon {
-    min-height: 70px;
-    margin-bottom: 15px;
-  }
-
-  .section-standards .standards-card .title_middle {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .section-standards .standards-card .standards__text {
-    font-size: 12px;
   }
 
   .section-gallery .gallery__wrap-img:after {

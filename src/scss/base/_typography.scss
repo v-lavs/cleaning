@@ -12,8 +12,10 @@
     font-weight: 700;
   }
 
-  @include respond-to($md) {
-
+  @include respond-to($xl) {
+    &_middle {
+      font-size: 1.25rem;
+    }
   }
 
   @include respond-to($sm) {
