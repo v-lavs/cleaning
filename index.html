@@ -169,7 +169,7 @@
                         </div>
                     </li>
                 </ul>
-                <button class="mob-visible">Переглянути всі послуги</button>
+                <button class="mob-visible" id="show-all-services"></button>
             </div>
         </section>
 
@@ -283,10 +283,19 @@
                 <!--        slider-->
                 <div class="wrap-slider-cleaning">
                     <div class="swiper-container slider-clearing">
+                        <div class="slider-clearing__pagination">
+                            <div class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0">Кімната</div>
+                            <div class="swiper-pagination-bullet" tabindex="0">Кухня</div>
+                            <div class="swiper-pagination-bullet" tabindex="0"> Передпокій</div>
+                            <div class="swiper-pagination-bullet" tabindex="0">Санвузол</div>
+                            <div class="swiper-pagination-bullet" tabindex="0">Лоджія
+                            </div>
+                        </div>
+
                         <div class="swiper-wrapper">
                             <div class="slider-clearing__slide swiper-slide"
-                                 style="background-image: url(assets/img/slide4.jpg);">
-                                <h3 class="slider-clearing__title" data-title="Кімната">Кімната</h3>
+                                 data-title="Кімната">
+                                <img class="slider-clearing__img" src="assets/img/slide-1.jpg" alt="">
                                 <ul class="clearing-list">
                                     <li class="clearing-list__item">Вимиємо вікна</li>
                                     <li class="clearing-list__item">Вимиємо двері</li>
@@ -298,7 +307,9 @@
                                 </ul>
                             </div>
                             <div class="slider-clearing__slide swiper-slide"
-                                 style="background-image: url(assets/img/slide3.jpg);">
+                                 data-title="Кухня" >
+                                <img class="slider-clearing__img" src="assets/img/slide-2.jpg" alt="">
+
                                 <ul class="clearing-list">
                                     <li class="clearing-list__item">Вимиємо освітлювальні<br> прилади</li>
                                     <li class="clearing-list__item">Вимиємо кухонні меблі</li>
@@ -308,8 +319,9 @@
                                     <li class="clearing-list__item">Вимиємо підлоги<br> і плінтуси</li>
                                 </ul>
                             </div>
-                            <div class="slider-clearing__slide swiper-slide"
-                                 style="background-image: url(assets/img/slide1.jpg);">
+                            <div class="slider-clearing__slide swiper-slide" >
+                                <img class="slider-clearing__img" src="assets/img/slide-3.jpg" alt="">
+
                                 <ul class="clearing-list">
                                     <li class="clearing-list__item">Вимиємо двері</li>
                                     <li class="clearing-list__item">Знепилимо стіни</li>
@@ -318,8 +330,9 @@
                                     <li class="clearing-list__item">Знепилимо та відполіруємо<br> меблі</li>
                                 </ul>
                             </div>
-                            <div class="slider-clearing__slide swiper-slide"
-                                 style="background-image: url(assets/img/slide2.jpg);">
+                            <div class="slider-clearing__slide swiper-slide" >
+                                <img class="slider-clearing__img" src="assets/img/slide-4.jpg" alt="">
+
                                 <ul class="clearing-list">
                                     <li class="clearing-list__item">Знепилимо та помиємо<br> відкриті полиці</li>
                                     <li class="clearing-list__item">Відполіруємо дзеркала</li>
@@ -330,6 +343,8 @@
                             </div>
                             <div class="slider-clearing__slide swiper-slide"
                                  style="background-image: url(assets/img/slide5.jpg);">
+                                <img class="slider-clearing__img" src="assets/img/slide-5.jpg" alt="">
+
                                 <ul class="clearing-list">
                                     <li class="clearing-list__item">Вимиємо вікна</li>
                                     <li class="clearing-list__item">Вимиємо стіни (плитку)</li>
@@ -473,53 +488,53 @@
                         </div>
                     </div>
 
-<!--                    <div class="panels-hide">-->
+                    <!--                    <div class="panels-hide">-->
 
-<!--                        <div class="panel">-->
-<!--                            <div class="panel__heading">-->
-<!--                                <div class="open-panel">-->
+                    <!--                        <div class="panel">-->
+                    <!--                            <div class="panel__heading">-->
+                    <!--                                <div class="open-panel">-->
 
-<!--                                </div>-->
-<!--                                <h3 class="panel__title title_middle">Чим обумовлені ціни?</h3>-->
-<!--                            </div>-->
-<!--                            <div class="panel-collapse">-->
-<!--                                <div class="panel-collapse__body dynamic-contetn">-->
-<!--                                    <p>Компанія строго підходить до вибору постачальника засобів для прибирання, основними-->
-<!--                                        критеріями є:-->
-<!--                                        - наявність акредитації / права представляти виробника на території Росії;-->
-<!--                                        наявність сертифікації, як європейської / американської, так і російської;-->
-<!--                                        високі екологічні стандарти продукції; наявність інструкцій і карт технічної та-->
-<!--                                        екологічної безпеки продукції; інформаційна підтримка, допомога в розробці-->
-<!--                                        індивідуальних санітарно-гігієнічних планів прибирання приміщення, навчання-->
-<!--                                        персоналу.-->
-<!--                                    </p>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                    <!--                                </div>-->
+                    <!--                                <h3 class="panel__title title_middle">Чим обумовлені ціни?</h3>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="panel-collapse">-->
+                    <!--                                <div class="panel-collapse__body dynamic-contetn">-->
+                    <!--                                    <p>Компанія строго підходить до вибору постачальника засобів для прибирання, основними-->
+                    <!--                                        критеріями є:-->
+                    <!--                                        - наявність акредитації / права представляти виробника на території Росії;-->
+                    <!--                                        наявність сертифікації, як європейської / американської, так і російської;-->
+                    <!--                                        високі екологічні стандарти продукції; наявність інструкцій і карт технічної та-->
+                    <!--                                        екологічної безпеки продукції; інформаційна підтримка, допомога в розробці-->
+                    <!--                                        індивідуальних санітарно-гігієнічних планів прибирання приміщення, навчання-->
+                    <!--                                        персоналу.-->
+                    <!--                                    </p>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
 
-<!--                        <div class="panel">-->
-<!--                            <div class="panel__heading">-->
-<!--                                <div class="open-panel">-->
+                    <!--                        <div class="panel">-->
+                    <!--                            <div class="panel__heading">-->
+                    <!--                                <div class="open-panel">-->
 
-<!--                                </div>-->
-<!--                                <h3 class="panel__title title_middle">Як давно ви працюєте в данній сфері?</h3>-->
-<!--                            </div>-->
-<!--                            <div class="panel-collapse">-->
-<!--                                <div class="panel-collapse__body dynamic-contetn">-->
-<!--                                    <p>Компанія строго підходить до вибору постачальника засобів для прибирання, основними-->
-<!--                                        критеріями є:-->
-<!--                                        - наявність акредитації / права представляти виробника на території Росії;-->
-<!--                                        наявність сертифікації, як європейської / американської, так і російської;-->
-<!--                                        високі екологічні стандарти продукції; наявність інструкцій і карт технічної та-->
-<!--                                        екологічної безпеки продукції; інформаційна підтримка, допомога в розробці-->
-<!--                                        індивідуальних санітарно-гігієнічних планів прибирання приміщення, навчання-->
-<!--                                        персоналу.-->
-<!--                                    </p>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                    <!--                                </div>-->
+                    <!--                                <h3 class="panel__title title_middle">Як давно ви працюєте в данній сфері?</h3>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="panel-collapse">-->
+                    <!--                                <div class="panel-collapse__body dynamic-contetn">-->
+                    <!--                                    <p>Компанія строго підходить до вибору постачальника засобів для прибирання, основними-->
+                    <!--                                        критеріями є:-->
+                    <!--                                        - наявність акредитації / права представляти виробника на території Росії;-->
+                    <!--                                        наявність сертифікації, як європейської / американської, так і російської;-->
+                    <!--                                        високі екологічні стандарти продукції; наявність інструкцій і карт технічної та-->
+                    <!--                                        екологічної безпеки продукції; інформаційна підтримка, допомога в розробці-->
+                    <!--                                        індивідуальних санітарно-гігієнічних планів прибирання приміщення, навчання-->
+                    <!--                                        персоналу.-->
+                    <!--                                    </p>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
 
-<!--                    </div>-->
+                    <!--                    </div>-->
 
                     <div class="other-questions">
                         <button class="load-more"><span class="icon"></span>Інші питання</button>

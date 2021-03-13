@@ -970,20 +970,14 @@ body.modal-open {
 
 .section-clearing .slider-clearing__slide {
   position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 766px;
   border-radius: 10px;
   overflow: hidden;
-  padding-top: 60px;
-  padding-bottom: 53px;
 }
 
 .section-clearing .slider-clearing__slide:before {
   position: absolute;
   content: '';
-  display: block;
+  display: none;
   left: 0;
   right: 0;
   bottom: 0;
@@ -992,11 +986,21 @@ body.modal-open {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.section-clearing .slider-clearing__img {
+  position: relative;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
 .section-clearing .slider-clearing__pagination {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   bottom: auto;
-  top: 8%;
+  top: 60px;
   position: absolute;
+  left: 0px;
+  right: 0;
   z-index: 2;
 }
 
@@ -1008,8 +1012,14 @@ body.modal-open {
   padding: .82em .65em;
   font-size: 16px;
   color: #ffffff;
+  text-align: center;
   border-radius: 10px;
   min-width: 145px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   font-family: "Montserrat", sans-serif;
   height: auto;
   opacity: 1;
@@ -1787,6 +1797,10 @@ body.modal-open {
 
   .section-services .services__item {
     width: 100%;
+  }
+
+  .section-services .services__item:nth-child(1n + 4) {
+    display: none;
   }
 
   .section-services .mob-visible {
