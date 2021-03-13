@@ -409,7 +409,7 @@ body.modal-open {
   background-color: #384996;
   border-color: #384996;
   line-height: .9;
-  letter-spacing: -.2%;
+  letter-spacing: -0.002em;
 }
 
 .btn_medium {
@@ -982,13 +982,13 @@ body.modal-open {
   color: #282828;
 }
 
-.section-faq .block-btn-open {
+.section-faq .other-questions {
   position: relative;
   margin-top: 35px;
   padding-top: 40px;
 }
 
-.section-faq .block-btn-open:before {
+.section-faq .other-questions:before {
   position: absolute;
   content: '';
   display: block;
@@ -1068,7 +1068,7 @@ body.modal-open {
   background-color: transparent;
   border: 1px solid #ffffff;
   line-height: .9;
-  letter-spacing: 0.2px;
+  letter-spacing: -0.002em;
   padding: .82em .65em;
   font-size: 16px;
   color: #ffffff;
@@ -1275,7 +1275,7 @@ body.modal-open {
   color: #384996;
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: -.2%;
+  letter-spacing: -0.002em;
   line-height: 1.33;
 }
 
@@ -1358,7 +1358,7 @@ body.modal-open {
 }
 
 .footer__bg {
-  background-image: linear-gradient(#568bf3, #384996);
+  background-image: linear-gradient(180deg, #79CDE1 -34.78%, #272884 105.16%);
   padding-top: 28px;
   padding-bottom: 28px;
   padding-left: 47px;
@@ -1372,22 +1372,26 @@ body.modal-open {
   flex-direction: column;
   justify-content: center;
   font-weight: 700;
+  width: 30%;
 }
 
 .footer .contacts_phone {
   text-align: right;
-  width: 30%;
   padding-right: 30px;
 }
 
-.footer .contacts_mail_ {
-  font-weight: 600;
-  width: 70%;
+.footer .contacts_mail {
+  font-weight: 500;
 }
 
 .footer .contacts__link {
   display: inline-block;
   text-transform: lowercase;
+}
+
+.footer .contacts__link:hover,
+.footer .contacts__link:focus {
+  text-decoration: underline;
 }
 
 .footer .wrap-btn_mob {
@@ -1493,6 +1497,10 @@ body.modal-open {
     height: 40px;
   }
 
+  .section-location .wrap-map {
+    padding-top: 46%;
+  }
+
   .container {
     max-width: 760px;
   }
@@ -1517,6 +1525,24 @@ body.modal-open {
 @media only screen and (max-width: 768px) {
   .section-banner {
     padding-top: 174px;
+  }
+
+  .section-faq .accordion {
+    padding-top: 65px;
+    padding-bottom: 30px;
+  }
+
+  .section-faq .panel__heading {
+    padding: 15px 32px 15px 0;
+    cursor: pointer;
+  }
+
+  .section-faq .other-questions {
+    padding-top: 30px;
+  }
+
+  .section-location .wrap-map {
+    padding-top: 55%;
   }
 
   .container {
@@ -1590,6 +1616,14 @@ body.modal-open {
 
   .header .header__nav .phone_mob .btn_main {
     margin-top: 37px;
+  }
+
+  .footer .contacts {
+    width: 50%;
+  }
+
+  .footer .footer__logo {
+    max-width: 130px;
   }
 }
 
@@ -1690,17 +1724,17 @@ body.modal-open {
   }
 
   .section-faq .accordion .open-panel {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     top: 17%;
   }
 
   .section-faq .accordion .open-panel:before {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
   }
 
-  .section-faq .block-btn-open {
+  .section-faq .other-questions {
     padding-top: 25px;
   }
 
@@ -1748,7 +1782,6 @@ body.modal-open {
   }
 
   .section-location .wrap-map {
-    padding-top: 55%;
     border-radius: 0;
   }
 
@@ -1775,26 +1808,23 @@ body.modal-open {
     margin-bottom: 6px;
   }
 
-  .footer {
-    font-size: 10px;
-  }
-
   .footer__bg {
-    padding: 15px 20px;
+    padding: 15px 10px;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .footer .contacts {
-    width: 50%;
     line-height: 2;
     text-align: center;
     padding: 0;
+    width: auto;
+    flex-grow: 0;
+    margin-bottom: 10px;
   }
 
   .footer .contacts_phone {
     order: 1;
-    text-align: left;
-    padding-left: 30px;
   }
 
   .footer .wrap-logo {
@@ -1815,7 +1845,7 @@ body.modal-open {
     width: 100%;
     order: 1;
     text-align: center;
-    padding-top: 28px;
+    padding-top: 18px;
   }
 
   .footer .wrap-btn_mob .btn {
@@ -1854,6 +1884,14 @@ body.modal-open {
     right: -33px;
   }
 
+  .section-faq .accordion .open-panel {
+    display: none;
+  }
+
+  .section-faq .accordion .panel__heading {
+    padding-right: 0;
+  }
+
   .section-standards .standards__list {
     justify-content: center;
   }
@@ -1879,5 +1917,13 @@ body.modal-open {
   .container {
     max-width: 100%;
     padding: 0 15px;
+  }
+
+  .footer .footer__logo {
+    max-width: 111px;
+  }
+
+  .footer .contacts {
+    letter-spacing: -0.002em;
   }
 }
