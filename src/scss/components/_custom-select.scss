@@ -1,6 +1,6 @@
 .nice-select {
   color: #8f8f8f;
-  height: 56px;
+  height: 57px;
   padding-top: 7px;
   font-size: 16px;
   border: 1px solid #DCE2E8;
@@ -30,7 +30,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  @include respond-to($xs){
+  @include respond-to($sm){
     height: 43px;
     padding-top: 0;
     padding-right: 30px;

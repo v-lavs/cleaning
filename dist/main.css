@@ -403,13 +403,13 @@ body.modal-open {
   border-radius: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  letter-spacing: -0.002em;
 }
 
 .btn_main {
   background-color: #384996;
   border-color: #384996;
   line-height: .9;
-  letter-spacing: -0.002em;
 }
 
 .btn_medium {
@@ -707,6 +707,10 @@ body.modal-open {
   display: flex;
 }
 
+.calculator .fieldboxes {
+  display: flex;
+}
+
 .calculator select {
   display: none;
 }
@@ -731,9 +735,9 @@ body.modal-open {
   display: inline-flex;
   flex-direction: column;
   padding-bottom: 25px;
-  width: 100%;
-  max-width: 216px;
+  width: 19.5%;
   flex-grow: 1;
+  margin: 0 2px;
 }
 
 .calculator .label {
@@ -798,7 +802,7 @@ body.modal-open {
 
 .nice-select {
   color: #8f8f8f;
-  height: 56px;
+  height: 57px;
   padding-top: 7px;
   font-size: 16px;
   border: 1px solid #DCE2E8;
@@ -1448,6 +1452,19 @@ body.modal-open {
     padding: 20px 0;
   }
 
+  .calculator .fieldboxes {
+    flex-wrap: wrap;
+  }
+
+  .calculator__form-group {
+    width: 45%;
+  }
+
+  .calculator .btn_submit {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     width: 47px;
@@ -1652,16 +1669,23 @@ body.modal-open {
     height: 12px;
   }
 
-  .calculator .calculator__form-group {
-    max-width: 100%;
-  }
-
-  .calculator .calculator__form-group {
+  .calculator__form-group {
+    width: 100%;
     padding-bottom: 15px;
+    margin: 0;
   }
 
   .calculator .label {
     margin-bottom: 5px;
+  }
+
+  .calculator .btn_submit {
+    padding: 16px 12px;
+    font-size: 14px;
+  }
+
+  .calculator .input {
+    padding: 11px 16px;
   }
 
   .swiper-button-next,
@@ -1674,6 +1698,18 @@ body.modal-open {
   .swiper-button-prev:before {
     width: 12px;
     height: 12px;
+  }
+
+  .nice-select {
+    height: 43px;
+    padding-top: 0;
+    padding-right: 30px;
+  }
+
+  .nice-select:after {
+    height: 9px;
+    width: 8px;
+    margin-top: -8px;
   }
 
   .section-banner {
@@ -1862,16 +1898,8 @@ body.modal-open {
     padding: 24px 9px 35px 14px;
   }
 
-  .nice-select {
-    height: 43px;
-    padding-top: 0;
-    padding-right: 30px;
-  }
-
-  .nice-select:after {
-    height: 9px;
-    width: 8px;
-    margin-top: -8px;
+  .calculator__form-footer {
+    padding-top: 10px;
   }
 
   .section-services .services__item {

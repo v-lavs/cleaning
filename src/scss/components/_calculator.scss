@@ -4,6 +4,10 @@
   border-radius: 10px;
   display: flex;
 
+  .fieldboxes {
+    display: flex;
+  }
+
   select {
     display: none;
   }
@@ -28,9 +32,9 @@
     display: inline-flex;
     flex-direction: column;
     padding-bottom: 25px;
-    width: 100%;
-    max-width: 216px;
+    width: 19.5%;
     flex-grow: 1;
+    margin: 0 2px;
   }
 
   .label {
@@ -52,18 +56,40 @@
     font-weight: 400;
   }
 
-  @include respond-to($sm) {
-    .calculator__form-group {
-      max-width: 100%;
+  @include respond-to($lg) {
+    .fieldboxes {
+      flex-wrap: wrap;
     }
-    .calculator__form-group {
+    &__form-group {
+      width: 45%;
+    }
+    .btn_submit {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+  }
+  @include respond-to($sm) {
+    &__form-group {
+      width: 100%;
       padding-bottom: 15px;
+      margin: 0;
     }
     .label {
       margin-bottom: 5px;
     }
+    .btn_submit {
+      padding: 16px 12px;
+      font-size: 14px;
+    }
+    .input {
+      padding: 11px 16px;
+    }
   }
   @include respond-to($xs) {
-      padding: 24px 9px 35px 14px;
+    padding: 24px 9px 35px 14px;
+
+    &__form-footer {
+      padding-top: 10px;
+    }
   }
 }
