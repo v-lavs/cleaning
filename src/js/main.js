@@ -21,6 +21,7 @@ $(document).ready(function () {
         nav.addClass('open');
         jQuery('.backdrop').fadeIn();
         $("body").addClass("modal-open");
+
     });
 
     $('.btn-close, .backdrop, .menu__link').click(function (e) {
@@ -28,6 +29,7 @@ $(document).ready(function () {
         nav.removeClass('open');
         jQuery('.backdrop').fadeOut();
         $("body").removeClass("modal-open");
+
     });
 
     // HEADER SCROLL

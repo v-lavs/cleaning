@@ -24,8 +24,13 @@
 
   .btn_submit {
     text-align: center;
-    padding-left: 72px;
-    padding-right: 72px;
+    padding: 20px 72px;
+
+    &:hover,
+    &:focus{
+      border-color: $darkslateblue;
+      color: $darkslateblue;
+    }
   }
 
   &__form-group {
@@ -64,8 +69,7 @@
       width: 45%;
     }
     .btn_submit {
-      padding-left: 36px;
-      padding-right: 36px;
+      padding: 20px 36px;
     }
   }
   @include respond-to($sm) {
@@ -78,7 +82,7 @@
       margin-bottom: 5px;
     }
     .btn_submit {
-      padding: 16px 12px;
+      padding: 21px 12px;
       font-size: 14px;
     }
     .input {
