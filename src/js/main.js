@@ -30,19 +30,19 @@ $(document).ready(function () {
         $("body").removeClass("modal-open");
     });
 
-    //HEADER SCROLL
-    //   let  scrollPrev = 0;
-    //
-    // $(window).scroll(function () {
-    //     let scrolled = $(window).scrollTop();
-    //
-    //     if (scrolled > 100 && scrolled > scrollPrev) {
-    //         $('.header').addClass('header_active');
-    //     } else {
-    //         $('.header').removeClass('header_active');
-    //     }
-    //     scrollPrev = scrolled;
-    // });
+    // HEADER SCROLL
+      let  scrollPrev = 0;
+
+    $(window).scroll(function () {
+        let scrolled = $(window).scrollTop();
+
+        if (scrolled > 100 && scrolled > scrollPrev) {
+            $('.header').addClass('header_active');
+        } else {
+            $('.header').removeClass('header_active');
+        }
+        scrollPrev = scrolled;
+    });
 
 
      // SMOOTH SCROLL TO ANCHOR
@@ -119,7 +119,7 @@ $(document).ready(function () {
                 slidesPerView: 2,
                 spaceBetween: 10,
             },
-            768: {
+            960: {
                 slidesPerView: 3,
                 spaceBetween: 20,
             },

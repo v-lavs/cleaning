@@ -1143,8 +1143,7 @@ body.modal-open {
   bottom: 0;
   z-index: 1;
   transition: .35s;
-  opacity: 0;
-  background: #000000;
+  background: rgba(1, 1, 1, 0);
 }
 
 .section-gallery .gallery__wrap-img:after {
@@ -1166,7 +1165,7 @@ body.modal-open {
 
 .section-gallery .gallery__wrap-img:hover:before,
 .section-gallery .gallery__wrap-img:focus:before {
-  opacity: .4;
+  background: rgba(1, 1, 1, 0.2);
 }
 
 .section-gallery .gallery__wrap-img .decor:hover,
@@ -1234,7 +1233,7 @@ body.modal-open {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -1243,6 +1242,12 @@ body.modal-open {
   line-height: 1.28;
   color: #384996;
   padding-bottom: 15px;
+  transition: .35s linear;
+  transform: translateY(0);
+}
+
+.header.header_active {
+  transform: translateY(-100%);
 }
 
 .header__top-content {
@@ -1507,7 +1512,7 @@ body.modal-open {
   }
 
   .container {
-    max-width: 100%;
+    max-width: 650px;
   }
 
   .header .btn-close,
@@ -1550,6 +1555,7 @@ body.modal-open {
     flex-direction: column;
     justify-content: flex-start;
     font-size: 18px;
+    margin-bottom: 37px;
   }
 
   .header .header__nav .menu__item {
@@ -1570,6 +1576,12 @@ body.modal-open {
 
   .header .header__nav .phone_mob {
     display: block;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .header .header__nav .phone_mob .btn_main {
+    margin-top: 37px;
   }
 }
 
@@ -1647,6 +1659,10 @@ body.modal-open {
     width: 100%;
   }
 
+  .section-services .services__content {
+    transform: translateY(55px);
+  }
+
   .section-services .mob-visible {
     display: block;
   }
@@ -1706,6 +1722,10 @@ body.modal-open {
   .section-location .wrap-map {
     padding-top: 55%;
     border-radius: 0;
+  }
+
+  .container {
+    max-width: 460px;
   }
 
   .header .header__top-content {
@@ -1799,6 +1819,13 @@ body.modal-open {
     min-height: 192px;
   }
 
+  .section-services .services .cost {
+    font-size: 10px;
+    padding: 8px 22px;
+    top: 18px;
+    right: -33px;
+  }
+
   .section-standards .standards__list {
     justify-content: center;
   }
@@ -1828,7 +1855,15 @@ body.modal-open {
     height: 23px;
   }
 
+  .section-gallery .gallery .gallery__wrap-img .decor {
+    top: 2px;
+    bottom: 2px;
+    right: 2px;
+    left: 2px;
+  }
+
   .container {
+    max-width: 100%;
     padding: 0 15px;
   }
 }

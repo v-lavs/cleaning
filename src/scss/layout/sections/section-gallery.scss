@@ -21,8 +21,7 @@
         bottom: 0;
         z-index: 1;
         transition: .35s;
-        opacity: 0;
-        background: #000000;
+        background: rgba(1, 1, 1, 0);
 
       }
 
@@ -45,7 +44,7 @@
 
       &:hover:before,
       &:focus:before {
-        opacity: .4;
+        background: rgba(1, 1, 1, 0.2);
       }
 
       .decor:hover,
@@ -103,6 +102,12 @@
       &__wrap-img:after{
         width: 23px;
         height: 23px;
+      }
+      .gallery__wrap-img .decor {
+        top: 2px;
+        bottom: 2px;
+        right: 2px;
+        left: 2px;
       }
     }
   }
