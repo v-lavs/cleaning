@@ -672,7 +672,7 @@ body.modal-open {
 
 .accordion .panel__heading {
   position: relative;
-  padding: 20px 0;
+  padding: 20px 35px 20px 0;
   transition: .7s;
 }
 
@@ -1685,13 +1685,19 @@ body.modal-open {
   }
 
   .section-faq .accordion .panel__heading {
-    padding: 13px 0;
+    padding: 13px 32px 13px 0;
     cursor: pointer;
   }
 
   .section-faq .accordion .open-panel {
-    opacity: 0;
-    visibility: hidden;
+    width: 30px;
+    height: 30px;
+    top: 17%;
+  }
+
+  .section-faq .accordion .open-panel:before {
+    width: 12px;
+    height: 12px;
   }
 
   .section-faq .block-btn-open {
