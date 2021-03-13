@@ -11,22 +11,30 @@
       width: 33.3%;
       padding: 0 10px;
       margin-bottom: 20px;
-      min-height: 245px;
       color: $white;
       flex-grow: 1;
+
     }
 
-    &__wrap-bg {
+    &__wrap-img {
       position: relative;
       display: flex;
       flex-wrap: wrap;
       align-items: flex-end;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
       overflow: hidden;
       border-radius: 10px;
+      padding-top: 63.36%;
+
+      .services__img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transform: translate(-50%, -50%) scale(1);
+        transition: .45s;
+      }
 
       &:before {
         position: absolute;
@@ -37,10 +45,15 @@
         top: 0;
         bottom: 0;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+        z-index: 1;
       }
 
       &:hover,
       &:focus {
+        .services__img {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+
         .services__content {
           transform: translateY(0);
           transition: transform .5s;
@@ -74,6 +87,7 @@
       padding: 0 27px 20px;
       transform: translateY(70px);
       transition: transform .5s;
+      z-index: 2;
     }
 
     &__block-btn {
@@ -117,15 +131,18 @@
       padding-right: 14px;
     }
   }
-
+  @include respond-to($md) {
+    .services__content {
+      transform: none;
+      padding-bottom: 10px;
+    }
+  }
 
   @include respond-to($sm) {
     .services__item {
       width: 100%;
     }
-    .services__content {
-      transform: translateY(55px);
-    }
+
     .mob-visible {
       display: block;
     }

@@ -23,7 +23,8 @@
   }
 
   .btn_main {
-    margin-bottom: 15px;
+    margin-bottom: 24px;
+    line-height: .8;
   }
 
   &__logo {
@@ -40,7 +41,8 @@
     font-size: 18px;
     font-weight: 700;
     letter-spacing: -0.002em;
-    line-height: 1.33;
+    line-height: 1.75;
+    text-align: right;
   }
 
   .phone-link {
@@ -73,7 +75,7 @@
     height: 32px;
     padding: 3px;
     margin-left: 23px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
     .line {
       display: block;
@@ -100,20 +102,19 @@
 
   @include respond-to($lg) {
     &__logo {
-      width: 168px;
-    }
-  }
-
-  @include respond-to($md) {
+          width: 168px;
+        }
     .btn-close,
     .btn-burger {
       display: block;
     }
-    .header__phone-block {
+   &__phone-block {
       margin-right: 0;
       font-size: 12px;
+     margin-bottom: 12px;
     }
-    .header__top-content {
+    &__top-content {
+      padding-bottom: 0;
       .btn {
         display: none;
       }
@@ -121,7 +122,6 @@
     .header__nav {
       padding: 80px 20px;
       position: fixed;
-      //left: 0;
       right: 0;
       top: 0;
       bottom: 0;
@@ -184,7 +184,7 @@
     }
     .btn-burger {
       margin-left: 18px;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
   }
 }

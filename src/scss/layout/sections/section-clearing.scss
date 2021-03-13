@@ -60,7 +60,8 @@
       display: none;
     }
   }
-  .clearing-list{
+
+  .clearing-list {
     &__item {
       position: absolute;
       background-color: $white;
@@ -91,18 +92,23 @@
         left: -30px;
       }
     }
+
   }
-  @include respond-to($md){
-    .slider-clearing__slide{
+.slider-clearing__title{
+  display: none;
+}
+  @include respond-to($md) {
+    .slider-clearing__slide {
       padding: 30% 70px 70px;
       min-height: 700px;
-      &:before{
-        background-color: rgba(0,0,0, .6);
+
+      &:before {
+        background-color: rgba(0, 0, 0, .6);
       }
     }
-    .clearing-list{
+    .clearing-list {
       &__item {
-        position:relative;
+        position: relative;
         background-color: transparent;
         border-radius: 0;
         padding: 0;
@@ -114,9 +120,11 @@
         font-size: 16px;
         display: block;
         min-height: 26px;
-       &:before{
-         display: none;
-       }
+
+        &:before {
+          display: none;
+        }
+
         &:after {
           position: absolute;
           content: '-';
@@ -129,22 +137,33 @@
         }
       }
     }
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: block;
+    }
+
+
+    .swiper-pagination-bullet,
+    h3 {
+      display: none;
+    }
+
   }
   @include respond-to($sm) {
     .container {
       padding: 0;
     }
-     .slider-clearing__slide{
+    .slider-clearing__slide {
       border-radius: 0;
-       min-height: 582px;
-       padding: 36% 52px 52px;
+      min-height: 582px;
+      padding: 36% 52px 52px;
     }
     .clearing-list__item {
       font-size: 12px;
     }
   }
-  @include respond-to($xs){
-    .slider-clearing__slide{
+  @include respond-to($xs) {
+    .slider-clearing__slide {
       min-height: 482px;
     }
   }

@@ -18,7 +18,7 @@
 </head>
 <body>
 
-
+<div class="backdrop" id="overlay"></div>
 <div class="wrapper">
     <header class="header">
 
@@ -44,19 +44,19 @@
                 <button class="btn-close" aria-label="Закрити"></button>
                 <ul class="menu">
                     <li class="menu__item">
-                        <a href="#about" class="menu__link">Про рослину</a>
+                        <a href="#servicesAvailable" class="menu__link">Послуги та ціни</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#buy" class="menu__link">Купівля</a>
+                        <a href="#calculator" class="menu__link">Калькулятор</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#franchise" class="menu__link">Франшиза</a>
+                        <a href="#gallery" class="menu__link">Фотогалерея</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#contacts" class="menu__link">Контакти</a>
+                        <a href="#questions" class="menu__link">Питання</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#franchise" class="menu__link">Франшиза</a>
+                        <a href="#franchise" class="menu__link">Вакансії</a>
                     </li>
                     <li class="menu__item">
                         <a href="#contacts" class="menu__link">Контакти</a>
@@ -69,7 +69,7 @@
                     <button type="button" class="btn btn_main btn_big popup-trigger-phone">Замовити дзвінок</button>
                 </div>
             </nav>
-            <div class="backdrop" id="overlay"></div>
+            <div class="backdrop"></div>
         </div>
     </header>
 
@@ -86,12 +86,13 @@
             </div>
         </section>
 
-        <section class="section-services">
+        <section class="section-services" id="servicesAvailable">
             <div class="container">
                 <h2 class="section__title">Послуги та ціни</h2>
                 <ul class="services">
                     <li class="services__item">
-                        <div class="services__wrap-bg" style="background-image: url(assets/img/image1.jpg);">
+                        <div class="services__wrap-img">
+                            <img src="assets/img/image1.jpg" alt="" class="services__img">
                             <div class="cost">від 800грн.</div>
                             <div class="services__content">
                                 <h3 class="services__title-item">Генеральне прибирання</h3>
@@ -103,7 +104,8 @@
                         </div>
                     </li>
                     <li class="services__item">
-                        <div class="services__wrap-bg" style="background-image: url(assets/img/image2.jpg);">
+                        <div class="services__wrap-img">
+                            <img src="assets/img/image2.jpg" alt="" class="services__img">
                             <div class="cost">від 800грн.</div>
                             <div class="services__content">
                                 <h3 class="services__title-item">Прибирання офісів та<br> обслуговування компаній </h3>
@@ -115,7 +117,8 @@
                         </div>
                     </li>
                     <li class="services__item">
-                        <div class="services__wrap-bg" style="background-image: url(assets/img/image3.jpg);">
+                        <div class="services__wrap-img">
+                            <img src="assets/img/image3.jpg" alt="" class="services__img">
                             <div class="cost">від 800грн.</div>
                             <div class="services__content">
                                 <h3 class="services__title-item">Прибирання після ремонту</h3>
@@ -127,7 +130,8 @@
                         </div>
                     </li>
                     <li class="services__item">
-                        <div class="services__wrap-bg" style="background-image: url(assets/img/image4.jpg);">
+                        <div class="services__wrap-img">
+                            <img src="assets/img/image4.jpg" alt="" class="services__img">
                             <div class="cost">від 800грн.</div>
                             <div class="services__content">
                                 <h3 class="services__title-item">Миття вікон та фасадів</h3>
@@ -139,7 +143,8 @@
                         </div>
                     </li>
                     <li class="services__item">
-                        <div class="services__wrap-bg" style="background-image: url(assets/img/image5.jpg);">
+                        <div class="services__wrap-img">
+                            <img src="assets/img/image5.jpg" alt="" class="services__img">
                             <div class="cost">від 800грн.</div>
                             <div class="services__content">
                                 <h3 class="services__title-item">Прибирання промислових<br> підприємств</h3>
@@ -151,7 +156,8 @@
                         </div>
                     </li>
                     <li class="services__item">
-                        <div class="services__wrap-bg" style="background-image: url(assets/img/image6.jpg);">
+                        <div class="services__wrap-img">
+                            <img src="assets/img/image6.jpg" alt="" class="services__img">
                             <div class="cost">від 800грн.</div>
                             <div class="services__content">
                                 <h3 class="services__title-item">Хімчистка</h3>
@@ -167,7 +173,7 @@
             </div>
         </section>
 
-        <section class="section section-payment">
+        <section class="section section-payment" id="calculator">
             <div class="container">
                 <h2 class="section__title">Калькулятор розрахунку прибирання</h2>
                 <div class="calculator">
@@ -212,14 +218,14 @@
                             </div>
                         </div>
                         <div class="calculator__form-footer">
-                            <button class="btn btn_main btn_big btn_submit">Розрахувати за 60 секунд</button>
+                            <button class="btn btn_main btn_big btn_submit">Розрахувати</button>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
 
-        <section class="section section-gallery">
+        <section class="section section-gallery" id="gallery">
             <div class="container">
                 <h2 class="section__title">Фотогалерея</h2>
                 <div class="gallery">
@@ -375,7 +381,7 @@
             </div>
         </section>
 
-        <section class="section section-faq">
+        <section class="section section-faq" id="questions">
             <div class="container">
                 <h2 class="section__title">Часті питання</h2>
                 <div class="accordion" id="accordion">
@@ -466,6 +472,55 @@
                             </div>
                         </div>
                     </div>
+
+<!--                    <div class="panels-hide">-->
+
+<!--                        <div class="panel">-->
+<!--                            <div class="panel__heading">-->
+<!--                                <div class="open-panel">-->
+
+<!--                                </div>-->
+<!--                                <h3 class="panel__title title_middle">Чим обумовлені ціни?</h3>-->
+<!--                            </div>-->
+<!--                            <div class="panel-collapse">-->
+<!--                                <div class="panel-collapse__body dynamic-contetn">-->
+<!--                                    <p>Компанія строго підходить до вибору постачальника засобів для прибирання, основними-->
+<!--                                        критеріями є:-->
+<!--                                        - наявність акредитації / права представляти виробника на території Росії;-->
+<!--                                        наявність сертифікації, як європейської / американської, так і російської;-->
+<!--                                        високі екологічні стандарти продукції; наявність інструкцій і карт технічної та-->
+<!--                                        екологічної безпеки продукції; інформаційна підтримка, допомога в розробці-->
+<!--                                        індивідуальних санітарно-гігієнічних планів прибирання приміщення, навчання-->
+<!--                                        персоналу.-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        <div class="panel">-->
+<!--                            <div class="panel__heading">-->
+<!--                                <div class="open-panel">-->
+
+<!--                                </div>-->
+<!--                                <h3 class="panel__title title_middle">Як давно ви працюєте в данній сфері?</h3>-->
+<!--                            </div>-->
+<!--                            <div class="panel-collapse">-->
+<!--                                <div class="panel-collapse__body dynamic-contetn">-->
+<!--                                    <p>Компанія строго підходить до вибору постачальника засобів для прибирання, основними-->
+<!--                                        критеріями є:-->
+<!--                                        - наявність акредитації / права представляти виробника на території Росії;-->
+<!--                                        наявність сертифікації, як європейської / американської, так і російської;-->
+<!--                                        високі екологічні стандарти продукції; наявність інструкцій і карт технічної та-->
+<!--                                        екологічної безпеки продукції; інформаційна підтримка, допомога в розробці-->
+<!--                                        індивідуальних санітарно-гігієнічних планів прибирання приміщення, навчання-->
+<!--                                        персоналу.-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+
                     <div class="other-questions">
                         <button class="load-more"><span class="icon"></span>Інші питання</button>
                     </div>
@@ -474,7 +529,7 @@
             </div>
         </section>
 
-        <section class="section-location">
+        <section class="section-location" id="contacts">
             <div class="container">
                 <h2 class="section__title hide">Де нас знайти</h2>
                 <div class="wrap-map">

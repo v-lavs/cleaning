@@ -1,7 +1,11 @@
 .accordion {
+  background-color: $lightskyblue;
+  padding: 80px 13% 40px;
+  border-radius: 10px;
+  overflow: hidden;
+
   .panel {
     width: 100%;
-
   }
 
   .open-panel {
@@ -38,6 +42,7 @@
 
       &_title {
         margin: 0 0 15px 0;
+        color: $dark;
       }
     }
   }
@@ -45,6 +50,7 @@
   .panel-collapse {
     display: none;
     padding: 5px 0 40px;
+
     &__body p {
       line-height: 2;
       margin: 0 0 20px 0;
@@ -58,9 +64,55 @@
       transition: transform .5s;
       transform: rotate(-45deg);
       background-color: $gray;
+
       &:before {
 
       }
+    }
+  }
+
+  @include respond-to($md) {
+    padding-top: 65px;
+    padding-bottom: 30px;
+    .panel__heading {
+      padding: 15px 32px 15px 0;
+      cursor: pointer;
+    }
+  }
+
+  @include respond-to($sm) {
+    padding: 30px 20px 30px;
+    border-radius: 0;
+
+    .panel__heading {
+      padding: 13px 32px 13px 0;
+      cursor: pointer;
+    }
+
+    .open-panel {
+      width: 26px;
+      height: 26px;
+      top: 17%;
+
+      &:before {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    .panel-collapse {
+      padding: 0;
+    }
+
+    .panel-collapse__body p {
+      font-size: 12px;
+    }
+  }
+  @include respond-to($xs){
+    .open-panel {
+      width: 20px;
+      height: 20px;
+      top: 24%;
     }
   }
 }

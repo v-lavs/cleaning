@@ -39,7 +39,7 @@
     }
   }
   @include respond-to($lg) {
-    padding-top: 240px;
+    padding-top: 160px;
     .banner {
       min-height: 450px;
       padding-bottom: 14.5%;
@@ -49,9 +49,7 @@
       }
     }
   }
-  @include respond-to($md) {
-    padding-top: 174px;
-  }
+
   @include respond-to($sm) {
     background-position: right 30% top;
     padding-top: 114px;

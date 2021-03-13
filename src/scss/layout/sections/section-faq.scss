@@ -1,14 +1,4 @@
 .section-faq {
-  .accordion {
-    background-color: $lightskyblue;
-    padding: 80px 13% 40px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .panel__title {
-    color: $dark;
-  }
 
   .other-questions {
     position: relative;
@@ -28,15 +18,8 @@
       background-image: linear-gradient(#F9FBFF 50%, #D6E3FF 50%);
     }
   }
+
   @include respond-to($md) {
-    .accordion{
-      padding-top: 65px;
-      padding-bottom: 30px;
-    }
-    .panel__heading {
-      padding: 15px 32px 15px 0;
-      cursor: pointer;
-    }
     .other-questions{
       padding-top: 30px;
     }
@@ -45,45 +28,10 @@
     .container {
       padding: 0;
     }
-    .accordion {
-      padding: 30px 20px 30px;
-      border-radius: 0;
 
-      .panel__heading {
-        padding: 13px 32px 13px 0;
-        cursor: pointer;
-      }
-
-      .open-panel {
-        width: 25px;
-        height: 25px;
-        top: 17%;
-
-        &:before {
-          width: 10px;
-          height: 10px;
-        }
-      }
-    }
     .other-questions {
       padding-top: 25px;
       margin-top: 28px;
-    }
-    .panel-collapse {
-      padding: 0;
-    }
-    .panel-collapse__body p {
-      font-size: 12px;
-    }
-  }
-  @include respond-to($xs){
-    .accordion{
-      .open-panel{
-        display: none;
-      }
-      .panel__heading{
-        padding-right: 0;
-      }
     }
   }
 }
