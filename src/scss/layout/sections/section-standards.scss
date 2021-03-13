@@ -43,13 +43,13 @@
   @include respond-to($sm) {
     .standards-card {
       &__bg-icon {
-        min-height: 70px;
+        min-height: 72px;
         margin-bottom: 15px;
       }
 
       .title_middle {
         font-size: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
 
       .standards__text {

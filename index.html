@@ -19,7 +19,6 @@
 <body>
 
 
-
 <div class="wrapper">
     <header class="header">
         <div class="backdrop" id="overlay"></div>
@@ -172,42 +171,44 @@
                 <h2 class="section__title">Калькулятор розрахунку прибирання</h2>
                 <div class="calculator">
                     <form action="#" class="calculator__form " method="post">
-                        <div class="calculator__form-group">
-                            <label class="label">Тип об'єкта</label>
-                            <select name="type-object" class="custom-select form-control">
-                                <option data-display="Вибрати" value="none" hidden="">Вибрати</option>
-                                <option value="Вологе прибирання">Вологе прибирання</option>
-                                <option value="Миття підлог і плінтусів">Миття підлог і плінтусів</option>
-                                <option value="Миття внної і душової">Миття ванної і душової</option>
-                                <option value="Сухе прибирання пилососом">Сухе прибирання пилососом</option>
-                                <option value="Миття дзеркал">Миття дзеркал</option>
-                                <option value="Дезінфекція">Дезінфекція</option>
-                                <option value="інше">інше</option>
-                            </select>
-                        </div>
-                        <div class="calculator__form-group">
-                            <label class="label">Площа кв.м</label>
-                            <input type="text" class="input" placeholder="Площа">
-                        </div>
-                        <div class="calculator__form-group">
-                            <label class="label">Тип прибирання</label>
-                            <select name="type-clearning" class="custom-select form-control">
-                                <option data-display="Вибрати" value="none" hidden="">Вибрати</option>
-                                <option value="Квартира">Квартира</option>
-                                <option value="Котедж">Котедж</option>
-                                <option value="Офіс">Офіс</option>
-                                <option value="Магазин">Магазин</option>
-                                <option value="Склад">Склад</option>
-                                <option value="Підприємство">Підприємство</option>
-                            </select>
-                        </div>
-                        <div class="calculator__form-group">
-                            <label class="label">Ваше ім'я</label>
-                            <input type="text" class="input" placeholder="Введіть ім'я*">
-                        </div>
-                        <div class="calculator__form-group">
-                            <label class="label">Ваш телефон</label>
-                            <input type="text" class="input" placeholder="Введіть телефон*">
+                        <div class="fieldboxes">
+                            <div class="calculator__form-group">
+                                <label class="label">Тип об'єкта</label>
+                                <select name="type-object" class="custom-select form-control">
+                                    <option data-display="Вибрати" value="none" hidden="">Вибрати</option>
+                                    <option value="Вологе прибирання">Вологе прибирання</option>
+                                    <option value="Миття підлог і плінтусів">Миття підлог і плінтусів</option>
+                                    <option value="Миття внної і душової">Миття ванної і душової</option>
+                                    <option value="Сухе прибирання пилососом">Сухе прибирання пилососом</option>
+                                    <option value="Миття дзеркал">Миття дзеркал</option>
+                                    <option value="Дезінфекція">Дезінфекція</option>
+                                    <option value="інше">інше</option>
+                                </select>
+                            </div>
+                            <div class="calculator__form-group">
+                                <label class="label">Площа кв.м</label>
+                                <input type="text" class="input" placeholder="Площа">
+                            </div>
+                            <div class="calculator__form-group">
+                                <label class="label">Тип прибирання</label>
+                                <select name="type-clearning" class="custom-select form-control">
+                                    <option data-display="Вибрати" value="none" hidden="">Вибрати</option>
+                                    <option value="Квартира">Квартира</option>
+                                    <option value="Котедж">Котедж</option>
+                                    <option value="Офіс">Офіс</option>
+                                    <option value="Магазин">Магазин</option>
+                                    <option value="Склад">Склад</option>
+                                    <option value="Підприємство">Підприємство</option>
+                                </select>
+                            </div>
+                            <div class="calculator__form-group">
+                                <label class="label">Ваше ім'я</label>
+                                <input type="text" class="input" placeholder="Введіть ім'я*">
+                            </div>
+                            <div class="calculator__form-group">
+                                <label class="label">Ваш телефон</label>
+                                <input type="text" class="input" placeholder="Введіть телефон*">
+                            </div>
                         </div>
                         <div class="calculator__form-footer">
                             <button class="btn btn_main btn_big btn_submit">Розрахувати за 60 секунд</button>
@@ -462,6 +463,7 @@
                 </div>
             </div>
         </section>
+
         <section class="section-location">
             <div class="container">
                 <h2 class="section__title hide">Де нас знайти</h2>

@@ -1736,6 +1736,7 @@ body.modal-open {
 
   .section-faq .other-questions {
     padding-top: 25px;
+    margin-top: 28px;
   }
 
   .section-faq .panel-collapse {
@@ -1760,13 +1761,13 @@ body.modal-open {
   }
 
   .section-standards .standards-card__bg-icon {
-    min-height: 70px;
+    min-height: 72px;
     margin-bottom: 15px;
   }
 
   .section-standards .standards-card .title_middle {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .section-standards .standards-card .standards__text {
