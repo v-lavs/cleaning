@@ -130,19 +130,11 @@ $(document).ready(function () {
     }
   })
 
-  let keys = ['Кімната', 'Кухня', ' Передпокій', 'Санвузол', 'Лоджія']
+
   let sliderDoClearing = new Swiper('.slider-clearing', {
     navigation: {
-      nextEl: '.wrap-slider-clearing .swiper-button-next',
-      prevEl: '.wrap-slider-clearing .swiper-button-prev',
-    },
-    pagination: {
-      el: '.slider-clearing__pagination',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<div class="' + className + '">' + (keys[index]) +
-          '</div>'
-      },
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   })
 
