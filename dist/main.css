@@ -932,6 +932,39 @@ body.modal-open {
   text-overflow: ellipsis;
 }
 
+.baguetteBox-button#next-button,
+.baguetteBox-button#previous-button {
+  background: #384996;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+
+.baguetteBox-button#next-button:before,
+.baguetteBox-button#previous-button:before {
+  position: absolute;
+  content: '';
+  display: block;
+  background-image: url(../assets/img/svg/right-arrow.svg);
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.baguetteBox-button#next-button svg,
+.baguetteBox-button#previous-button svg {
+  display: none;
+}
+
+.baguetteBox-button#previous-button:before {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
 .section-banner {
   padding-top: 280px;
 }
@@ -1599,6 +1632,12 @@ body.modal-open {
     height: 47px;
   }
 
+  .baguetteBox-button#next-button,
+  .baguetteBox-button#previous-button {
+    width: 47px;
+    height: 47px;
+  }
+
   .section-banner {
     padding-top: 160px;
   }
@@ -1978,6 +2017,18 @@ body.modal-open {
     height: 9px;
     width: 8px;
     margin-top: -8px;
+  }
+
+  .baguetteBox-button#next-button,
+  .baguetteBox-button#previous-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .baguetteBox-button#next-button:before,
+  .baguetteBox-button#previous-button:before {
+    width: 12px;
+    height: 12px;
   }
 
   .section-banner {

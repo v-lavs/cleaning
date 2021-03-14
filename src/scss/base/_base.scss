@@ -119,20 +119,21 @@ body {
     top: 50%;
     transform: translateY(-50%);
   }
-@include respond-to($xxl){
-  width: 65px;
-  height: 140px;
-  &:before{
-    width: 75px;
-    height: 100px;
-    left: -57%;
-  }
-}
 
-  @include respond-to($md){
+  @include respond-to($xxl) {
+    width: 65px;
+    height: 140px;
+    &:before {
+      width: 75px;
+      height: 100px;
+      left: -57%;
+    }
+  }
+
+  @include respond-to($md) {
     width: 40px;
     height: 60px;
-    &:before{
+    &:before {
       background-image: url(../assets/img/svg/icon-help-smal.svg);
       width: 70px;
       left: -115%;
@@ -142,13 +143,15 @@ body {
     width: 35px;
     height: 52px;
     top: 28%;
-    &:before{
+    &:before {
       width: 50px;
       height: 64px;
       left: -85%;
     }
   }
 }
+
+
 
 
 
