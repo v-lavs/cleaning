@@ -259,4 +259,25 @@ $(document).ready(function () {
       overlayBackgroundColor: 'rgba (1,1,1, .25)'
     });
   });
+
+  //CARD HEIGHT
+  function setEqualHeight() {
+    var max_card_title_height = 0;
+    var $standardsCardTitle = $('.standards-card__title');
+    $standardsCardTitle.each(function () {
+      if ($(this).height() > max_card_title_height) {
+        max_card_title_height = $(this).height();
+      }
+    });
+    $standardsCardTitle.css({minHeight: $(window).width() > 380 ? max_card_title_height : 'auto'});
+  }
+
+  setEqualHeight();
+  $(window).on('resize orientationchange', function () {
+    var resizedWindowWidth = $(window).width();
+
+    if (windowW !== resizedWindowWidth) {
+      setEqualHeight();
+    }
+  })
 })

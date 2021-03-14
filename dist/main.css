@@ -660,6 +660,7 @@ body.modal-open {
 }
 
 .modal_details-servisec .modal__body {
+  text-align: left;
   background-image: url(../assets/img/bg-modal.png);
   background-position: right bottom;
   background-repeat: no-repeat;
@@ -965,6 +966,24 @@ body.modal-open {
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
+.banner_video {
+  position: relative;
+  padding-bottom: 45%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #282828;
+}
+
+.video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
 .section-banner {
   padding-top: 280px;
 }
@@ -1202,8 +1221,7 @@ body.modal-open {
   font-weight: 700;
 }
 
-.section-clearing .slider-clearing .swiper-button-next,
-.section-clearing .slider-clearing .swiper-button-prev {
+.section-clearing .slider-clearing .heading_mob {
   display: none;
 }
 
@@ -1265,7 +1283,6 @@ body.modal-open {
 .section-standards .standards-card__title {
   color: #384996;
   margin-bottom: 25px;
-  min-height: 46px;
 }
 
 .section-gallery .gallery {
@@ -1678,9 +1695,24 @@ body.modal-open {
     background-color: rgba(0, 0, 0, 0.6);
   }
 
-  .section-clearing .slider-clearing .swiper-button-next,
-  .section-clearing .slider-clearing .swiper-button-prev {
-    display: block;
+  .section-clearing .slider-clearing .heading_mob {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    top: 60px;
+    left: 80px;
+    right: 80px;
+    text-align: center;
+    z-index: 2;
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  .section-clearing .swiper-button-next,
+  .section-clearing .swiper-button-prev {
+    position: relative;
+    transform: translateY(25%);
   }
 
   .section-clearing .clearing-list {
@@ -2077,6 +2109,15 @@ body.modal-open {
     padding: 0;
   }
 
+  .section-clearing .slider-clearing .heading_mob {
+    font-size: 14px;
+  }
+
+  .section-clearing .slider-clearing__img {
+    width: auto;
+    height: 100%;
+  }
+
   .section-clearing .slider-clearing__slide {
     border-radius: 0;
     min-height: 482px;
@@ -2231,6 +2272,12 @@ body.modal-open {
     padding: 8px 22px;
     top: 18px;
     right: -33px;
+  }
+
+  .section-clearing .slider-clearing .heading_mob {
+    right: 60px;
+    left: 60px;
+    top: 46px;
   }
 
   .section-clearing .slider-clearing__slide {
