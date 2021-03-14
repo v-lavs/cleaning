@@ -1,5 +1,5 @@
 .modal {
-  max-width: 576px;
+  max-width: 518px;
   width: 100%;
   min-height: 380px;
   background-color: $lightskyblue;
@@ -12,6 +12,9 @@
   opacity: 0;
   transition: opacity .5s linear;
   overflow: hidden;
+  border-radius: 10px;
+  letter-spacing: -0.002em;
+  color: $dark;
 
   &.modal_active {
     overflow: visible;
@@ -21,22 +24,32 @@
   }
 
   &__header {
+    position: relative;
     background-color: $white;
     font-weight: 700;
-    font-size: 24px;
-    letter-spacing: -0.05em;
-    color: #14213D;
-    padding: 20px 25px;
-    margin-bottom: 25px;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    padding: 32px;
   }
 
+  .space {
+    color: $darkslateblue;
+  }
+.information-payment{
+  text-align: left;
+  &__item{
+    margin-bottom: 8px;
+  }
+}
   &__body {
     width: 100%;
-    padding: 30px 20px;
-  }
+    padding: 48px 32px;
+    text-align: center;
 
-  &__timer {
-    margin: 0 auto;
+    p {
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
   }
 
   &__description {
@@ -47,6 +60,7 @@
   &__footer {
     padding-top: 45px;
     text-align: center;
+    font-size: 14px;
   }
 
   .information {
@@ -63,13 +77,16 @@
   }
 
   .btn-close {
-    top: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     right: 20px;
   }
 
 
-  .btn_main {
+  .form .btn_submit {
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .thank-you {
@@ -88,10 +105,62 @@
     }
   }
 
-  @include respond-to($xs) {
-    //padding: 30px 20px 85px;
+  &_details-servisec {
+    width: 80%;
+    max-width: 1060px;
+
     .modal__header {
-      //margin-bottom: 58px;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .modal__body {
+      background-image: url(../assets/img/bg-modal.png);
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+      padding: 47px 26px;
+      font-weight: 700;
+    }
+  }
+
+  @include respond-to($lg) {
+    &_details-servisec {
+      .modal__header {
+        font-size: 18px;
+      }
+    }
+  }
+  @include respond-to($md) {
+    .form{
+      padding-top: 10px;
+    }
+    &__header {
+      padding: 30px 17px 24px 20px;
+    }
+    &__body {
+      padding: 30px;
+      p{
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+    }
+
+    &_details-servisec {
+      .modal__header {
+        padding: 22px 50px 30px 20px;
+      }
+
+      .modal__body {
+        padding: 40px 20px 45px;
+      }
+    }
+  }
+  @include respond-to($sm) {
+    max-width: 360px;
+    width: 100%;
+    &__footer{
+      padding-top: 35px;
     }
   }
 }

@@ -42,6 +42,7 @@
 
 }
 
+.to-top,
 .load-more {
   background-color: transparent;
   border: none;
@@ -77,13 +78,37 @@
   }
 }
 
+.to-top {
+  position: fixed;
+  bottom: 68px;
+  right: 25px;
+  z-index: 100;
+  transition: opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+
+  .icon {
+    margin: 0;
+  }
+
+  .icon:before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
 .btn-close {
   position: absolute;
   border: none;
   background-color: $darkslateblue;
   background-image: url(../assets/img/svg/close.svg);
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   padding: 6px;
   border-radius: 50%;
   background-repeat: no-repeat;
@@ -98,29 +123,43 @@
       padding: .75em;
     }
   }
+
+  .to-top,
   .load-more {
     .icon {
       width: 47px;
       height: 47px;
     }
   }
-  .btn-close{
+  .btn-close {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@include respond-to($md) {
+  .btn-close {
     width: 30px;
     height: 30px;
+  }
+  .to-top{
+    right: 10px;
   }
 }
 
 @include respond-to($sm) {
   .load-more {
     font-size: 12px;
+
     .icon {
       width: 30px;
       height: 30px;
       margin-right: 24px;
-     &:before{
-       width: 12px;
-       height: 12px;
-     }
+
+      &:before {
+        width: 12px;
+        height: 12px;
+      }
     }
   }
 }

@@ -68,6 +68,11 @@
       }
     }
   }
+  @include respond-to($xs) {
+    .banner {
+      min-height: 276px;
+    }
+  }
 }
 
 

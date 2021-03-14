@@ -37,6 +37,7 @@ body {
     font-weight: 700;
     line-height: 1.22;
   }
+
   @include respond-to($lg) {
     &__title {
       font-size: 24px;
@@ -56,6 +57,96 @@ body {
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 1.25em;
+  }
+
+  ul {
+    li {
+      position: relative;
+      margin-bottom: 24px;
+      padding-left: 15px;
+
+      &:before {
+        position: absolute;
+        content: '-';
+        display: block;
+        font-weight: 700;
+        z-index: 1;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  @include respond-to($sm) {
+    p {
+
+    }
+    ul {
+      font-size: 14px;
+      line-height: 1.28;
+
+      li {
+        position: relative;
+        margin-bottom: 15px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+.online-help {
+  position: fixed;
+  width: 98px;
+  height: 164px;
+  background-color: $lightskyblue;
+  padding: 23px 0;
+  border: none;
+  top: 280px;
+  right: 0;
+  z-index: 99;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url(../assets/img/svg/question.svg);
+    background-repeat: no-repeat;
+    background-position: 0;
+    width: 87px;
+    height: 120px;
+    background-size: contain;
+    left: -45%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+@include respond-to($xxl){
+  width: 65px;
+  height: 140px;
+  &:before{
+    width: 75px;
+    height: 100px;
+    left: -57%;
+  }
+}
+
+  @include respond-to($md){
+    width: 40px;
+    height: 60px;
+    &:before{
+      background-image: url(../assets/img/svg/icon-help-smal.svg);
+      width: 70px;
+      left: -115%;
+    }
+  }
+  @include respond-to($sm) {
+    width: 35px;
+    height: 52px;
+    top: 28%;
+    &:before{
+      width: 50px;
+      height: 64px;
+      left: -85%;
+    }
   }
 }
 

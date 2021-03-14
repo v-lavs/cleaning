@@ -5,12 +5,17 @@
   .input {
     display: block;
     width: 100%;
-    border: none;
-    border-bottom: 1px solid #CDCDCD;
-    line-height: 1.9;
-    padding: 5px 10px 5px 0;
+    background: #ffffff;
+    border: 1px solid #dce2e8;
+    border-radius: 8px;
+    line-height: 1;
+    padding: 17px 17px 18px;
     text-align: center;
     font-weight: 400;
+    &.in-valid{
+      border: 1px solid #ff5656;
+      color: #ff5656;
+    }
   }
 
   ::placeholder {
@@ -21,8 +26,29 @@
   &__group {
     margin-bottom: 30px;
   }
-
-  &__footer {
+  .btn_submit {
     text-align: center;
+    padding: 20px 72px;
+
+    &:hover,
+    &:focus{
+      border-color: $darkslateblue;
+      color: $darkslateblue;
+    }
+  }
+
+  .invalid{
+    border: 1px solid #ff5656;
+    color: #ff5656;
+  }
+  @include respond-to($xs){
+    .input{
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
+    .btn_submit{
+      padding-top: 13px;
+      padding-bottom: 14px;
+    }
   }
 }
