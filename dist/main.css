@@ -1000,7 +1000,7 @@ body.modal-open {
   bottom: auto;
   top: 60px;
   position: absolute;
-  left: 0px;
+  left: 0;
   right: 0;
   z-index: 2;
 }
@@ -1487,17 +1487,17 @@ body.modal-open {
     background-color: rgba(0, 0, 0, 0.6);
   }
 
+  .section-clearing .slider-clearing .swiper-button-next,
+  .section-clearing .slider-clearing .swiper-button-prev {
+    display: block;
+  }
+
   .section-clearing .clearing-list {
     display: block;
   }
 
   .section-clearing .clearing-list__item {
     margin-bottom: 35px;
-  }
-
-  .section-clearing .swiper-button-next,
-  .section-clearing .swiper-button-prev {
-    display: block;
   }
 
   .section-standards .standards__list {
@@ -1799,7 +1799,10 @@ body.modal-open {
 
   .section-clearing .slider-clearing__slide {
     border-radius: 0;
-    min-height: 582px;
+    min-height: 482px;
+  }
+
+  .section-clearing .clearing-list {
     padding: 36% 52px 52px;
   }
 
@@ -1936,7 +1939,7 @@ body.modal-open {
   }
 
   .section-clearing .clearing-list__item {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
   }
 
   .section-standards .standards__list {

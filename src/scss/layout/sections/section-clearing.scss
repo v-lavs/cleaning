@@ -15,7 +15,7 @@
         bottom: 0;
         top: 0;
         z-index: 1;
-        background-color: rgba(1,1,1, 0);
+        background-color: rgba(1, 1, 1, 0);
       }
     }
 
@@ -33,7 +33,7 @@
       bottom: auto;
       top: 60px;
       position: absolute;
-      left: 0px;
+      left: 0;
       right: 0;
       z-index: 2;
 
@@ -81,6 +81,7 @@
     bottom: 0;
     z-index: 2;
     padding: 30% 70px 70px;
+
     &__item {
       position: relative;
       color: $white;
@@ -104,29 +105,35 @@
     }
   }
 
-  @include respond-to($lg){
-    .slider-clearing__pagination{
-      display: none;
-    }
+  @include respond-to($lg) {
+    .slider-clearing {
+      &__pagination {
+        display: none;
+      }
 
-    .slider-clearing__slide {
-      min-height: 700px;
-      z-index: 1;
-      &:before {
+      &__slide {
+        min-height: 700px;
+        z-index: 1;
+
+        &:before {
+          display: block;
+          background-color: rgba(0, 0, 0, .6);
+        }
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
         display: block;
-        background-color: rgba(0, 0, 0, .6);
       }
     }
+
     .clearing-list {
       display: block;
-      &__item{
+
+      &__item {
         margin-bottom: 35px;
       }
     }
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: block;
-    }
+
 
   }
   @include respond-to($sm) {
@@ -135,12 +142,16 @@
     }
     .slider-clearing__slide {
       border-radius: 0;
-      min-height: 582px;
-      padding: 36% 52px 52px;
+      min-height: 482px;
+
     }
-    .clearing-list__item {
-      font-size: 12px;
-      margin-bottom: 25px;
+    .clearing-list {
+      padding: 36% 52px 52px;
+
+      &__item {
+        font-size: 12px;
+        margin-bottom: 25px;
+      }
     }
   }
   @include respond-to($xs) {
@@ -148,7 +159,7 @@
       min-height: 482px;
     }
     .clearing-list__item {
-      margin-bottom: 16px;
+      margin-bottom: 15px;
     }
   }
 }
