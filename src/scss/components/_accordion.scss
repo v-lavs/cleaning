@@ -22,10 +22,10 @@
       position: absolute;
       content: '';
       background-image: url(../assets/img/svg/plus.svg);
-      width: 14px;
-      height: 14px;
+      width: 20px;
+      height: 20px;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
       background-position: center;
       z-index: 1;
       left: 50%;
@@ -95,8 +95,8 @@
       top: 17%;
 
       &:before {
-        width: 10px;
-        height: 10px;
+        width: 16px;
+        height: 16px;
       }
     }
 
@@ -113,6 +113,10 @@
       width: 20px;
       height: 20px;
       top: 24%;
+      &:before {
+        width: 13px;
+        height: 13px;
+      }
     }
   }
 }
