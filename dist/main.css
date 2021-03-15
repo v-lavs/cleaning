@@ -1263,7 +1263,6 @@ body.modal-open {
   padding-left: 30px;
   z-index: 1;
   font-size: 16px;
-  min-height: 26px;
 }
 
 .section-clearing .clearing-list__item:before {
@@ -1750,7 +1749,7 @@ body.modal-open {
   }
 
   .section-clearing .clearing-list__item {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 
   .section-standards .standards__list {
@@ -2167,7 +2166,7 @@ body.modal-open {
 
   .section-clearing .clearing-list__item {
     font-size: 12px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   .section-standards .standards-card__bg-icon {
@@ -2321,10 +2320,6 @@ body.modal-open {
 
   .section-clearing .slider-clearing__slide {
     min-height: 482px;
-  }
-
-  .section-clearing .clearing-list__item {
-    margin-bottom: 15px;
   }
 
   .section-standards .standards__list {
