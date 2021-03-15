@@ -1196,7 +1196,7 @@ body.modal-open {
 .section-clearing .slider-clearing__img {
   position: relative;
   display: block;
-  height: auto;
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
@@ -2147,11 +2147,6 @@ body.modal-open {
 
   .section-clearing .slider-clearing .heading_mob {
     font-size: 14px;
-  }
-
-  .section-clearing .slider-clearing__img {
-    width: auto;
-    height: 100%;
   }
 
   .section-clearing .slider-clearing__slide {

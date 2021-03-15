@@ -274,6 +274,8 @@ $(document).ready(function () {
   }
 
   setEqualHeight();
+
+  var windowW = $(window).width();
   $(window).on('resize orientationchange', function () {
     var resizedWindowWidth = $(window).width();
 
