@@ -257,7 +257,7 @@ $(document).ready(function () {
       async: false,
       preload: 2,
       animation: 'fadeIn',
-      // overlayBackgroundColor: 'rgba (1,1,1, .25)'
+      overlayBackgroundColor: 'rgba (1,1,1, .25)'
     });
   });
 
