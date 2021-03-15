@@ -24,7 +24,7 @@ $(document).ready(function () {
 
   })
 
-  $('.btn-close, .backdrop, .menu__link').click(function (e) {
+  $('.btn-close, .backdrop, .menu__link, .popup-trigger-phone').click(function (e) {
     e.preventDefault()
     nav.removeClass('open')
     jQuery('.backdrop').fadeOut()
@@ -59,6 +59,7 @@ $(document).ready(function () {
         }, 1500)
       }
     })
+
   }
 
   smoothScrollToAnchor('.menu__link')

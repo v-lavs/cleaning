@@ -35,6 +35,10 @@
       border-color: $darkslateblue;
       color: $darkslateblue;
     }
+    .btn_submit:disabled{
+      background-color: $gray;
+      border-color: $gray;
+    }
   }
 
   .invalid{
