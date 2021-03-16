@@ -229,7 +229,14 @@ function getSlideCaption(slider) {
       }
     }
   });
+  $('.slider-clearing .swiper-pagination-bullet').click(function (e) {
+    e.preventDefault()
+    const index = $(e.target).index()
+    $('.slider-clearing .swiper-pagination-bullet').removeClass('swiper-pagination-bullet-active')
+    $(e.target).addClass('swiper-pagination-bullet-active')
 
+    sliderDoClearing.slideTo(index)
+  })
 
 
   //HIDE CARDS
