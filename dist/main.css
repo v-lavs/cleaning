@@ -1910,6 +1910,7 @@ body.modal-open {
     z-index: 2;
     font-size: 18px;
     color: #ffffff;
+    transition: .5s;
   }
 
   .section-clearing .swiper-button-next,
@@ -2345,6 +2346,12 @@ body.modal-open {
   .section-clearing .clearing-list__item {
     font-size: 12px;
     margin-bottom: 15px;
+  }
+
+  .section-clearing .swiper-button-next,
+  .section-clearing .swiper-button-prev {
+    position: relative;
+    transform: translateY(40%);
   }
 
   .section-standards .standards-card__bg-icon {
