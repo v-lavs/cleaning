@@ -53,9 +53,9 @@ $(document).ready(function () {
 
       if (anchor.match(/^#/) && anchor !== '#') {
         event.preventDefault()
-
+        let offsetSize = $("header").innerHeight();
         $('html, body').animate({
-          scrollTop: $($.attr(this, 'href')).offset().top - 0
+          scrollTop: $($.attr(this, 'href')).offset().top - offsetSize
         }, 1500)
       }
     })
