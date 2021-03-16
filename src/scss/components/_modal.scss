@@ -184,7 +184,7 @@
   flex-direction: column;
   text-align: center;
 
-  &.modal_active {
+  &.show {
     .thanks-page__content {
       transition: .35s;
       animation: backInUp .7s ease-out forwards .65s;

@@ -44,7 +44,12 @@
     }
   }
   @include respond-to($sm) {
+    .standards__list {
+      justify-content: center;
+    }
     .standards-card {
+      width: 100%;
+      max-width: 300px;
       &__bg-icon {
         min-height: 72px;
         margin-bottom: 15px;
@@ -61,11 +66,8 @@
     }
   }
   @include respond-to($xs) {
-    .standards__list {
-      justify-content: center;
-    }
+
     .standards-card {
-      width: 100%;
       max-width: 253px;
       padding-top: 22px;
     }
