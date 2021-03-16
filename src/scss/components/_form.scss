@@ -44,6 +44,9 @@
   .invalid{
     border: 1px solid #ff5656;
     color: #ff5656;
+    &::placeholder {
+      color: #ff5656;
+    }
   }
   @include respond-to($xs){
     .input{

@@ -87,10 +87,10 @@
                 <div class="banner_video">
                     <video class="banner__thumb" src="assets/video/test-video.mp4" controls autoplay></video>
 
-                        <div class="banner__slogan">
-                            <p>Ми робимо будинки <span>чистими, безпечними, здоровими</span></p>
-                        </div>
+                    <div class="banner__slogan">
+                        <p>Ми робимо будинки <span>чистими, безпечними, здоровими</span></p>
                     </div>
+                </div>
             </div>
         </section>
 
@@ -105,8 +105,11 @@
                             <div class="services__content">
                                 <h3 class="services__title-item">Генеральне прибирання</h3>
                                 <div class="services__block-btn">
-                                    <button class="btn btn_glass btn_medium popupTrigger" data-theme
-                                            data-content-id="generalTidyingUp">Делальніше
+                                    <button class="btn btn_glass btn_medium popupTrigger"
+                                            data-title="Генеральне прибирання <span class='space'>від 50 - 2000 грн/м²</span>"
+                                            data-theme
+                                            data-content-id="generalTidyingUp">
+                                        Делальніше
                                     </button>
                                     <button class="btn btn_main btn_medium popupTrigger2">Замовити</button>
                                 </div>
@@ -135,7 +138,9 @@
                             <div class="services__content">
                                 <h3 class="services__title-item">Прибирання офісів та<br> обслуговування компаній </h3>
                                 <div class="services__block-btn">
-                                    <button class="btn btn_glass btn_medium popupTrigger" data-theme
+                                    <button class="btn btn_glass btn_medium popupTrigger"
+                                            data-title="Прибирання офісів та обслуговування компаній <span class='space'>від 50 - 2000 грн/м²</span>"
+                                            data-theme
                                             data-content-id="tidyingOffise">Делальніше
                                     </button>
                                     <button class="btn btn_main btn_medium popupTrigger2">Замовити</button>
@@ -162,7 +167,9 @@
                             <div class="services__content">
                                 <h3 class="services__title-item">Прибирання після ремонту</h3>
                                 <div class="services__block-btn">
-                                    <button class="btn btn_glass btn_medium popupTrigger" data-theme
+                                    <button class="btn btn_glass btn_medium popupTrigger"
+                                            data-title="Прибирання після ремонту <span class='space'>від 50 - 2000 грн/м²</span>"
+                                            data-theme
                                             data-content-id="tidyingRepairs">Делальніше
                                     </button>
                                     <button class="btn btn_main btn_medium popupTrigger2">Замовити</button>
@@ -188,7 +195,9 @@
                             <div class="services__content">
                                 <h3 class="services__title-item">Миття вікон та фасадів</h3>
                                 <div class="services__block-btn">
-                                    <button class="btn btn_glass btn_medium popupTrigger" data-theme
+                                    <button class="btn btn_glass btn_medium popupTrigger"
+                                            data-title="Миття вікон та фасадів <span class='space'>від 50 - 2000 грн/м²</span>"
+                                            data-theme
                                             data-content-id="washingFacades">Делальніше
                                     </button>
                                     <button class="btn btn_main btn_medium popupTrigger2">Замовити</button>
@@ -214,7 +223,9 @@
                             <div class="services__content">
                                 <h3 class="services__title-item">Прибирання промислових<br> підприємств</h3>
                                 <div class="services__block-btn">
-                                    <button class="btn btn_glass btn_medium popupTrigger" data-theme
+                                    <button class="btn btn_glass btn_medium popupTrigger"
+                                            data-title="Прибирання промислових підприємств <span class='space'>від 50 - 2000 грн/м²</span>"
+                                            data-theme
                                             data-content-id="cleaningEnterprises">Делальніше
                                     </button>
                                     <button class="btn btn_main btn_medium popupTrigger2">Замовити</button>
@@ -236,23 +247,25 @@
                             <div class="services__content">
                                 <h3 class="services__title-item">Хімчистка</h3>
                                 <div class="services__block-btn">
-                                    <button class="btn btn_glass btn_medium popupTrigger" data-theme
+                                    <button class="btn btn_glass btn_medium popupTrigger"
+                                            data-title="Хімчистка <span class='space'>від 50 - 2000 грн/м²</span>"
+                                            data-theme
                                             data-content-id="dryCleaners">Делальніше
                                     </button>
                                     <button class="btn btn_main btn_medium popupTrigger2">Замовити</button>
                                 </div>
                             </div>
                         </div>
+                        <template id="dryCleaners">
+                            <ul>
+                                <li>Миття плити, витяжки, холодильники</li>
+                                <li>Миття ванної та душової кабіни</li>
+                                <li>Очищення змішувачів від водного нальоту</li>
+                                <li>Вологе прибирання шафок і відкритих полиць у ванній кімнаті</li>
+                                <li>Знежирення і видалення загальних забруднень з фасадів шаф, кухні</li>
+                            </ul>
+                        </template>
                     </li>
-                    <template id="dryCleaners">
-                        <ul>
-                            <li>Миття плити, витяжки, холодильники</li>
-                            <li>Миття ванної та душової кабіни</li>
-                            <li>Очищення змішувачів від водного нальоту</li>
-                            <li>Вологе прибирання шафок і відкритих полиць у ванній кімнаті</li>
-                            <li>Знежирення і видалення загальних забруднень з фасадів шаф, кухні</li>
-                        </ul>
-                    </template>
                 </ul>
                 <button class="mob-visible" id="show-all-services"></button>
             </div>
@@ -382,13 +395,13 @@
                         <div class="heading_mob">
                             <!-- Add Arrows -->
                             <div class="swiper-button-prev"></div>
-                            <h3 class="slide__title">Кімната</h3>
+                            <h3 class="swiper-caption"></h3>
                             <div class="swiper-button-next"></div>
 
                         </div>
 
                         <div class="swiper-wrapper">
-                            <div class="slider-clearing__slide swiper-slide" data-title="Кімната">
+                            <div class="slider-clearing__slide swiper-slide" data-caption="Кімната">
 
                                 <picture>
                                     <source srcset="assets/img/slide1-m.jpg" media="(max-width: 960px)">
@@ -405,7 +418,7 @@
                                     <li class="clearing-list__item">Вимиємо підлоги<br> і плінтуси</li>
                                 </ul>
                             </div>
-                            <div class="slider-clearing__slide swiper-slide" data-title="Кухня">
+                            <div class="slider-clearing__slide swiper-slide" data-caption="Кухня">
                                 <picture>
                                     <source srcset="assets/img/slide2-m.jpg" media="(max-width: 960px)">
                                     <img class="slider-clearing__img" src="assets/img/slide-2.jpg" alt="">
@@ -419,7 +432,7 @@
                                     <li class="clearing-list__item">Вимиємо підлоги<br> і плінтуси</li>
                                 </ul>
                             </div>
-                            <div class="slider-clearing__slide swiper-slide" data-title="Передпокій">
+                            <div class="slider-clearing__slide swiper-slide" data-caption="Передпокій">
                                 <picture>
                                     <source srcset="assets/img/slide3-m.jpg" media="(max-width: 960px)">
                                     <img class="slider-clearing__img" src="assets/img/slide-3.jpg" alt="">
@@ -432,7 +445,7 @@
                                     <li class="clearing-list__item">Знепилимо та відполіруємо<br> меблі</li>
                                 </ul>
                             </div>
-                            <div class="slider-clearing__slide swiper-slide" data-title="Санвузол">
+                            <div class="slider-clearing__slide swiper-slide" data-caption="Санвузол">
                                 <picture>
                                     <source srcset="assets/img/slide4-m.jpg" media="(max-width: 960px)">
                                     <img class="slider-clearing__img" src="assets/img/slide-4.jpg" alt="">
@@ -445,7 +458,7 @@
                                     <li class="clearing-list__item">Відмиємо всю сантехніку</li>
                                 </ul>
                             </div>
-                            <div class="slider-clearing__slide swiper-slide" data-title="Лоджія">
+                            <div class="slider-clearing__slide swiper-slide" data-caption="Лоджія">
                                 <picture>
                                     <source srcset="assets/img/slide5-m.jpg" media="(max-width: 960px)">
                                     <img class="slider-clearing__img" src="assets/img/slide-5.jpg" alt="">
@@ -742,7 +755,30 @@
             </div>
         </div>
     </div>
+    <div class="thanks-page">
+        <div class="wrap-icon">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="circle" d="M40.3334 20.3133V22C40.3312 25.9534 39.051 29.8002 36.6839 32.9666C34.3167 36.1331 30.9894 38.4495 27.1982 39.5704C23.407 40.6914 19.3551 40.5568 15.6466 39.1867C11.9382 37.8166 8.77195 35.2845 6.62018 31.9679C4.4684 28.6514 3.44637 24.7281 3.70649 20.7832C3.96661 16.8383 5.49496 13.0832 8.06359 10.0779C10.6322 7.07262 14.1035 4.97816 17.9598 4.10689C21.816 3.23562 25.8506 3.63424 29.4618 5.24329"
+                      stroke="#53DCA3" stroke-width="3.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="tick" d="M40.3333 7.33337L22 25.685L16.5 20.185" stroke="#53DCA3" stroke-width="3.66667"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="thanks-page__content">
+            <p>Вашу заявку прийнято.</p>
+            <p>Очікуйте дзвінка</p>
+        </div>
+        <div class="thanks-page__bg">
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+        </div>
+    </div>
 </div>
+
 <div class="modal" id="popupPhone">
     <div class="modal__header">
         <button class="btn-close" aria-label="Закрити" id="closePopup"></button>
@@ -789,6 +825,7 @@
         </div>
     </div>
 </div>
+
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>

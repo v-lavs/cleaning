@@ -22,7 +22,7 @@
 
     &__title {
       color: $darkslateblue;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
   }
 
@@ -34,9 +34,13 @@
   @include respond-to($lg) {
     .standards__list {
       flex-wrap: wrap;
+
     }
     .standards-card {
       width: 50%;
+      &__title{
+        margin-bottom: 15px;
+      }
     }
   }
   @include respond-to($sm) {
@@ -48,7 +52,7 @@
 
       .title_middle {
         font-size: 16px;
-        margin-bottom: 18px;
+        margin-bottom: 10px;
       }
 
       .standards__text {

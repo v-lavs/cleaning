@@ -68,12 +68,14 @@ $(document).ready(function () {
   $('.popupTrigger2').click(function (e) {
     e.preventDefault();
     $('#popupOrder').addClass('modal_active');
+    $('.thanks-page').addClass('modal_active');
     $('.backdrop').fadeIn();
     $('body').addClass('modal-open');
   })
 
   $('#closePopup,  #overlay').click(function () {
     $('#popupOrder').removeClass('modal_active');
+    $('.thanks-page').removeClass('modal_active');
     $('.backdrop').fadeOut();
     $('body').removeClass('modal-open');
   });
@@ -123,11 +125,12 @@ $(document).ready(function () {
 
   $(".popupTrigger").click(function (e) {
     e.preventDefault();
-    console.log(12343)
     var theme = $(this).data('theme');
     var contentId = $(this).data('content-id');
+    var title = $(this).data('title');
     var content = $('#' + contentId).html();
 
+    $('#popupMoreDetails .modal__heading').html(title);
     $contentBlock.html(content);
 
     $("#popupMoreDetails").addClass(theme).addClass('modal_active');
@@ -141,6 +144,10 @@ $(document).ready(function () {
     $(".backdrop").fadeOut();
     $contentBlock.html();
     $('body').removeClass('modal-open');
+    setTimeout(function () {
+      $('#popupMoreDetails .modal__content').html('')
+      $('#popupMoreDetails .modal__heading').html('')
+    }, 500)
   })
 
 
@@ -196,6 +203,13 @@ $(document).ready(function () {
   })
 
 //SWIPER-SLIDER
+
+function getSlideCaption(slider) {
+  var activeSlide = slider.slides[slider.activeIndex];
+  var caption = $(activeSlide).attr('data-caption');
+    $('.slider-clearing .swiper-caption').html(caption);
+  console.log(caption)
+  }
   let sliderDoClearing = new Swiper('.slider-clearing', {
     navigation: {
       nextEl: '.swiper-button-next',
@@ -206,16 +220,17 @@ $(document).ready(function () {
       crossFade: true,
     },
     speed: 1000,
-  })
+    on : {
+      slideChange: function () {
+        getSlideCaption(this);
+      },
+      init: function () {
+        getSlideCaption(this);
+      }
+    }
+  });
 
-  $('.slider-clearing .swiper-pagination-bullet').click(function (e) {
-    e.preventDefault()
-    const index = $(e.target).index()
-    $('.slider-clearing .swiper-pagination-bullet').removeClass('swiper-pagination-bullet-active')
-    $(e.target).addClass('swiper-pagination-bullet-active')
 
-    sliderDoClearing.slideTo(index)
-  })
 
   //HIDE CARDS
   let mobHideSevices = true;
