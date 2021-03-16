@@ -626,7 +626,7 @@ body.modal-open {
   top: 50%;
   transform: translateY(-50%);
   right: 20px;
-  z-index: 1;
+  z-index: 10;
 }
 
 .modal .form .btn_submit {
@@ -686,13 +686,13 @@ body.modal-open {
 
 .thanks-page.modal_active .thanks-page__content {
   transition: .35s;
-  animation: backInUp .75s forwards .6s;
+  animation: backInUp .7s ease-out forwards .65s;
 }
 
 .thanks-page.modal_active .circle {
   stroke-dasharray: 100;
   stroke-dashoffset: -100;
-  animation: draw .75s forwards;
+  animation: draw .75s  forwards .2s;
 }
 
 .thanks-page.modal_active .tick {
@@ -701,9 +701,38 @@ body.modal-open {
   animation: draw .75 forwards .8s;
 }
 
+.thanks-page.modal_active .star {
+  animation: stretch .3s ease-out .2s infinite alternate;
+  transition: .35s;
+}
+
+.thanks-page.modal_active .star:nth-child(2) {
+  animation-delay: .4s;
+}
+
+.thanks-page.modal_active .star:nth-child(3) {
+  animation-delay: .5s;
+}
+
+.thanks-page.modal_active .star:nth-child(4) {
+  animation-delay: .6s;
+}
+
+.thanks-page.modal_active .star:nth-child(5) {
+  animation-delay: .7s;
+}
+
+.thanks-page.modal_active .star:nth-child(6) {
+  animation-delay: .8s;
+}
+
+.thanks-page.modal_active .star:nth-child(7) {
+  animation-delay: .9s;
+}
+
 .thanks-page__content {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   transform: translateY(100%);
   opacity: 0;
   transition: .35s;
@@ -728,8 +757,9 @@ body.modal-open {
   background-position: center;
   background-size: contain;
   z-index: 1;
-  top: 30px;
-  right: 160px;
+  top: 5%;
+  right: 31%;
+  transform: scale(0);
 }
 
 .thanks-page__bg .star:nth-child(2) {
@@ -740,31 +770,38 @@ body.modal-open {
 }
 
 .thanks-page__bg .star:nth-child(3) {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   top: 75%;
-  right: 120px;
+  right: 23%;
 }
 
 .thanks-page__bg .star:nth-child(4) {
-  width: 54px;
-  height: 54px;
-  top: 40%;
-  right: 60px;
+  width: 24px;
+  height: 24px;
+  top: 25%;
+  left: 14%;
 }
 
 .thanks-page__bg .star:nth-child(5) {
-  width: 16px;
-  height: 16px;
-  top: 42%;
-  left: 140px;
+  width: 54px;
+  height: 54px;
+  top: 35%;
+  right: 11%;
 }
 
 .thanks-page__bg .star:nth-child(6) {
+  width: 16px;
+  height: 16px;
+  top: 42%;
+  left: 27%;
+}
+
+.thanks-page__bg .star:nth-child(7) {
   width: 34px;
   height: 34px;
   top: 85%;
-  left: 100px;
+  left: 20%;
 }
 
 .thanks-page .wrap-icon {
