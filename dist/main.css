@@ -692,13 +692,13 @@ body.modal-open {
 .thanks-page.modal_active .circle {
   stroke-dasharray: 100;
   stroke-dashoffset: -100;
-  animation: draw .8s forwards;
+  animation: draw .75s forwards;
 }
 
 .thanks-page.modal_active .tick {
   stroke-dasharray: 50;
   stroke-dashoffset: -50;
-  animation: draw .8s forwards .8s;
+  animation: draw .75 forwards .8s;
 }
 
 .thanks-page__content {
