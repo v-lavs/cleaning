@@ -247,7 +247,7 @@ function getSlideCaption(slider) {
   showServicesBtn.click(function (e) {
     e.preventDefault();
     $('.services .services__item:nth-child(n+4)').slideToggle(500);
-    const text = mobHideSevices ? 'Переглянути всі послуги' : 'Згорнути послуги';
+    const text = mobHideSevices ? 'Згорнути послуги' : 'Переглянути всі послуги ';
     mobHideSevices = !mobHideSevices;
     $(this).text(text);
   })

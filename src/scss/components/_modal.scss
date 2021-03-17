@@ -205,7 +205,7 @@
     .tick {
       stroke-dasharray: 50;
       stroke-dashoffset: -50;
-      animation: draw .75 ease-in-out forwards .8s;
+      animation: draw-tick .75 ease-in-out forwards .8s;
     }
 
     .star {
@@ -327,8 +327,11 @@
   }
 
   @keyframes draw {
+    from {
+      stroke-dashoffset: -100;
+    }
     to {
-      stroke-dashoffset: 0
+      stroke-dashoffset: 0;
     }
   }
   @keyframes stretch {
