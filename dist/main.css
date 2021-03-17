@@ -685,21 +685,31 @@ body.modal-open {
   text-align: center;
 }
 
+.thanks-page .circle {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  opacity: 0;
+}
+
+.thanks-page .tick {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  opacity: 0;
+}
+
 .thanks-page.show .thanks-page__content {
   transition: .35s;
   animation: backInUp .7s ease-out forwards .65s;
 }
 
 .thanks-page.show .circle {
-  stroke-dasharray: 100;
-  stroke-dashoffset: 100;
-  animation: draw .75s ease-in-out reverse .2s;
+  opacity: 1;
+  animation: draw .75s ease-in-out forwards .2s;
 }
 
 .thanks-page.show .tick {
-  stroke-dasharray: 50;
-  stroke-dashoffset: 50;
-  animation: draw-tick .75 ease-in-out reverse .8s;
+  opacity: 1;
+  animation: draw-tick .75s ease-in-out forwards .8s;
 }
 
 .thanks-page.show .star {
@@ -824,7 +834,7 @@ body.modal-open {
   }
 
   to {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 200;
   }
 }
 
@@ -834,7 +844,7 @@ body.modal-open {
   }
 
   to {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 100;
   }
 }
 

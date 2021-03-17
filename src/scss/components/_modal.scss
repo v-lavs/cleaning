@@ -189,7 +189,17 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
+  .circle {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    opacity: 0;
+  }
 
+  .tick {
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    opacity: 0;
+  }
   &.show {
     .thanks-page__content {
       transition: .35s;
@@ -197,15 +207,13 @@
     }
 
     .circle {
-      stroke-dasharray: 100;
-      stroke-dashoffset: 100;
-      animation: draw .75s ease-in-out reverse .2s;
+      opacity: 1;
+      animation: draw .75s ease-in-out forwards .2s;
     }
 
     .tick {
-      stroke-dasharray: 50;
-      stroke-dashoffset: 50;
-      animation: draw-tick .75 ease-in-out reverse .8s;
+      opacity: 1;
+      animation: draw-tick .75s ease-in-out forwards .8s;
     }
 
     .star {
@@ -331,7 +339,7 @@
       stroke-dashoffset: 100;
     }
     to {
-      stroke-dashoffset: 0;
+      stroke-dashoffset: 200;
     }
   }
 
@@ -340,7 +348,7 @@
       stroke-dashoffset: 50;
     }
     to {
-      stroke-dashoffset: 0;
+      stroke-dashoffset: 100;
     }
   }
   @keyframes stretch {
