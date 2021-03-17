@@ -468,7 +468,7 @@ body.modal-open {
 }
 
 .load-more {
-  width: 168px;
+  width: 170px;
 }
 
 .to-top {
@@ -2038,7 +2038,7 @@ body.modal-open {
     z-index: 999;
     max-width: 380px;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
   }
 
   .header .header__nav.open {
@@ -2193,7 +2193,7 @@ body.modal-open {
   .online-help {
     width: 35px;
     height: 52px;
-    top: 38%;
+    top: 28%;
   }
 
   .online-help:before {
@@ -2265,7 +2265,8 @@ body.modal-open {
   }
 
   .calculator {
-    padding: 24px 9px 35px 14px;
+    padding-right: 25px;
+    padding-left: 25px;
   }
 
   .calculator__form-group {
