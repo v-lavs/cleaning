@@ -657,6 +657,7 @@ body.modal-open {
 
 .modal_details-servisec .modal__header {
   font-size: 24px;
+  padding-right: 100px;
   line-height: 1;
 }
 
@@ -692,7 +693,7 @@ body.modal-open {
 .thanks-page.show .circle {
   stroke-dasharray: 100;
   stroke-dashoffset: -100;
-  animation: draw .75s ease-in-out  forwards .2s;
+  animation: draw .75s ease-in-out forwards .2s;
 }
 
 .thanks-page.show .tick {
@@ -2087,7 +2088,7 @@ body.modal-open {
   }
 
   .modal_details-servisec .modal__header {
-    padding: 22px 50px 30px 20px;
+    padding: 22px 70px 30px 20px;
   }
 
   .modal_details-servisec .modal__body {
@@ -2150,7 +2151,7 @@ body.modal-open {
   .online-help {
     width: 35px;
     height: 52px;
-    top: 35%;
+    top: 38%;
   }
 
   .online-help:before {
@@ -2181,6 +2182,10 @@ body.modal-open {
   .modal {
     max-width: 360px;
     width: 100%;
+  }
+
+  .modal_details-servisec .modal__header h3 {
+    font-size: 18px;
   }
 
   .modal__footer {

@@ -115,6 +115,7 @@
 
     .modal__header {
       font-size: 24px;
+      padding-right: 100px;
       line-height: 1;
     }
 
@@ -154,7 +155,7 @@
 
     &_details-servisec {
       .modal__header {
-        padding: 22px 50px 30px 20px;
+        padding: 22px 70px 30px 20px;
       }
 
       .modal__body {
@@ -165,6 +166,11 @@
   @include respond-to($sm) {
     max-width: 360px;
     width: 100%;
+    &_details-servisec {
+      .modal__header h3{
+        font-size: 18px;
+      }
+    }
     &__footer {
       padding-top: 35px;
     }
@@ -193,7 +199,7 @@
     .circle {
       stroke-dasharray: 100;
       stroke-dashoffset: -100;
-      animation: draw .75s ease-in-out  forwards .2s;
+      animation: draw .75s ease-in-out forwards .2s;
     }
 
     .tick {
@@ -205,6 +211,7 @@
     .star {
       animation: stretch .3s ease-in .2s infinite alternate;
       transition: .35s;
+
       &:nth-child(2) {
         animation-delay: .4s;
       }
@@ -226,6 +233,7 @@
       &:nth-child(6) {
         animation-delay: .8s;
       }
+
       &:nth-child(7) {
         animation-delay: .9s;
       }
@@ -261,6 +269,7 @@
       top: 5%;
       right: 31%;
       transform: scale(0);
+
       &:nth-child(2) {
         width: 26px;
         height: 26px;
@@ -272,7 +281,7 @@
         width: 18px;
         height: 18px;
         top: 75%;
-        right:23%;
+        right: 23%;
       }
 
       &:nth-child(4) {
@@ -288,12 +297,14 @@
         top: 35%;
         right: 11%;
       }
+
       &:nth-child(6) {
         width: 16px;
         height: 16px;
         top: 42%;
         left: 27%;
       }
+
       &:nth-child(7) {
         width: 34px;
         height: 34px;
@@ -307,6 +318,7 @@
     width: 44px;
     height: 44px;
     margin-bottom: 40px;
+
     svg {
       width: 100%;
       height: auto;
