@@ -270,6 +270,9 @@ function getSlideCaption(slider) {
     $('html, body').animate({scrollTop: 0}, '600');
   });
 //BAGUETTE BOX
+    $('.gallery a').click(function (e) {
+      e.preventDefault();
+    });
     baguetteBox.run('.gallery', {
       buttons: 'auto', // arrows navigation
       noScrollbars: false,
