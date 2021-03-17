@@ -60,11 +60,14 @@
   }
 
   &__nav {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .header__inner {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
-    border-radius: 8px;
-    overflow: hidden;
   }
 
   .btn-burger {
@@ -102,19 +105,20 @@
 
   @include respond-to($lg) {
     &__logo {
-          width: 168px;
-        }
+      width: 168px;
+    }
     .btn-close,
     .btn-burger {
       display: block;
     }
-   &__phone-block {
+    &__phone-block {
       margin-right: 0;
       font-size: 12px;
-     margin-bottom: 12px;
+      margin-bottom: 12px;
     }
     &__top-content {
       padding-bottom: 0;
+
       .btn {
         display: none;
       }
@@ -125,16 +129,15 @@
       right: 0;
       top: 0;
       bottom: 0;
-      flex-direction: column;
       background-color: $white;
       overflow: auto;
-      text-align: center;
       transition: transform .5s;
       transform: translateX(100%);
       z-index: 999;
       max-width: 380px;
       width: 100%;
       height: 100vh;
+
       &.open {
         transform: translateX(0);
       }
@@ -144,15 +147,18 @@
         justify-content: flex-start;
         font-size: 18px;
         margin-bottom: 37px;
+
         &__item {
           margin-bottom: 15px;
           width: 100%;
           border-radius: 10px;
           flex: 0;
           line-height: .9;
-          &:before{
+
+          &:before {
             display: none;
           }
+
           &:last-child {
             margin-bottom: 0;
           }
@@ -163,10 +169,16 @@
         display: block;
         font-size: 18px;
         font-weight: 700;
-        .btn_main{
+
+        .btn_main {
           margin-top: 37px;
         }
       }
+    }
+    .header__inner {
+      flex-direction: column;
+      text-align: center;
+      height: 100vh;
     }
   }
 

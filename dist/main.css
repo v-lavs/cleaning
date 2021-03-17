@@ -1704,11 +1704,14 @@ body.modal-open {
 }
 
 .header__nav {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.header .header__inner {
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
-  border-radius: 8px;
-  overflow: hidden;
 }
 
 .header .btn-burger {
@@ -2029,10 +2032,8 @@ body.modal-open {
     right: 0;
     top: 0;
     bottom: 0;
-    flex-direction: column;
     background-color: #ffffff;
     overflow: auto;
-    text-align: center;
     transition: transform .5s;
     transform: translateX(100%);
     z-index: 999;
@@ -2076,6 +2077,12 @@ body.modal-open {
 
   .header .header__nav .phone_mob .btn_main {
     margin-top: 37px;
+  }
+
+  .header .header__inner {
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
   }
 
   .footer {
