@@ -68,12 +68,14 @@ $(document).ready(function () {
     $('.popupTrigger2').click(function (e) {
         e.preventDefault();
         $('#popupOrder').addClass('modal_active');
+        $('.thanks-page').addClass('show');
         $('.backdrop').fadeIn();
         $('body').addClass('modal-open');
     })
 
     $('#closePopup,  #overlay').click(function () {
         $('#popupOrder').removeClass('modal_active');
+        $('.thanks-page').removeClass('show');
         $('.backdrop').fadeOut();
         $('body').removeClass('modal-open');
     });
