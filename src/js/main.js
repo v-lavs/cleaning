@@ -272,6 +272,7 @@ function getSlideCaption(slider) {
 //BAGUETTE BOX
     $('.gallery a').click(function (e) {
       e.preventDefault();
+      console.log(111)
     });
     baguetteBox.run('.gallery', {
       buttons: 'auto', // arrows navigation
