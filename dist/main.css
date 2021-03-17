@@ -2150,7 +2150,7 @@ body.modal-open {
   .online-help {
     width: 35px;
     height: 52px;
-    top: 28%;
+    top: 35%;
   }
 
   .online-help:before {
@@ -2274,6 +2274,7 @@ body.modal-open {
 
   .section-banner {
     background-position: right 30% top;
+    padding-top: 113px;
   }
 
   .section-banner .container {

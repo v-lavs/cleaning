@@ -90,6 +90,7 @@
 
   @include respond-to($sm) {
     background-position: right 30% top;
+    padding-top: 113px;
     .container {
       padding: 0;
     }
@@ -126,7 +127,6 @@
       min-height: 276px;
     }
   }
-
 }
 
 
