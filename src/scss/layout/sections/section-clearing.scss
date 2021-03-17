@@ -104,6 +104,9 @@
 
   @include respond-to($lg) {
     .slider-clearing {
+      &__img{
+        width: 100%;
+      }
       &__pagination {
         display: none;
       }
@@ -116,10 +119,6 @@
           display: block;
           background-color: rgba(0, 0, 0, .6);
         }
-      }
-
-      &__img{
-        width: 100%;
       }
 
       .heading_mob {
