@@ -1,5 +1,7 @@
 .section-faq {
-
+  .panel:nth-child(1n + 5) {
+    display: none;
+  }
   .show-questions {
     position: relative;
     margin-top: 35px;

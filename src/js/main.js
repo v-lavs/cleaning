@@ -252,6 +252,21 @@ $(document).ready(function () {
         $(this).text(text);
     })
 
+    // SHOW MORE QUESTION
+
+    let hideQuestions = true;
+    const showQuestionsBtn = $('#showQuestions');
+    const text = $('.text');
+    text.text('Інші питання');
+
+    showQuestionsBtn.click(function (e) {
+        e.preventDefault();
+        $('.accordion .panel:nth-child(n+5)').slideToggle(500);
+        const textBtn = hideQuestions ? 'Згорнути питання' : 'Інші питання';
+        hideQuestions = !hideQuestions;
+        text.text(textBtn);
+    })
+
     // CUSTOM SELECT
 
     $('.custom-select').niceSelect();

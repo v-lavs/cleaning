@@ -429,8 +429,10 @@ body.modal-open {
   border: none;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   font-size: 16px;
   margin: 0 auto;
+  width: 168px;
 }
 
 .to-top .icon,
@@ -459,6 +461,11 @@ body.modal-open {
   background-position: center;
   background-size: contain;
   z-index: 1;
+}
+
+.to-top .icon .text,
+.load-more .icon .text {
+  transition: .35s;
 }
 
 .to-top {
@@ -1360,6 +1367,10 @@ body.modal-open {
   text-decoration: underline;
 }
 
+.section-faq .panel:nth-child(1n + 5) {
+  display: none;
+}
+
 .section-faq .show-questions {
   position: relative;
   margin-top: 35px;
@@ -1857,8 +1868,7 @@ body.modal-open {
   }
 
   .modal .modal__header {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 22px;
   }
 
   .calculator .fieldboxes {
@@ -2213,8 +2223,9 @@ body.modal-open {
     width: 100%;
   }
 
-  .modal_details-servisec .modal__header h3 {
+  .modal .modal__header {
     font-size: 18px;
+    line-height: 24px;
   }
 
   .modal__footer {

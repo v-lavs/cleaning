@@ -48,8 +48,10 @@
   border: none;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   font-size: 16px;
   margin: 0 auto;
+  width: 168px;
 
   .icon {
     position: relative;
@@ -74,6 +76,9 @@
       background-position: center;
       background-size: contain;
       z-index: 1;
+    }
+    .text{
+      transition: .35s;
     }
   }
 }

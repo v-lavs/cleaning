@@ -136,8 +136,7 @@
 
   @include respond-to($lg) {
     .modal__header {
-      font-size: 18px;
-      line-height: 24px;
+      font-size: 22px;
     }
   }
   @include respond-to($md) {
@@ -169,10 +168,9 @@
   @include respond-to($sm) {
     max-width: 360px;
     width: 100%;
-    &_details-servisec {
-      .modal__header h3 {
-        font-size: 18px;
-      }
+    .modal__header {
+      font-size: 18px;
+      line-height: 24px;
     }
     &__footer {
       padding-top: 35px;
