@@ -127,7 +127,7 @@
       bottom: 0;
       flex-direction: column;
       background-color: $white;
-      overflow-y: auto;
+      overflow: auto;
       text-align: center;
       transition: transform .5s;
       transform: translateX(100%);

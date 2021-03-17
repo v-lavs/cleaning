@@ -275,9 +275,9 @@ $(document).ready(function () {
     const myBtn = $('#myBtn');
     $(window).scroll(function () {
         if ($(window).scrollTop() > 600) {
-            myBtn.addClass('show');
+            myBtn.addClass('show-btn');
         } else {
-            myBtn.removeClass('show');
+            myBtn.removeClass('show-btn');
         }
     });
 
