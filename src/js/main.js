@@ -265,6 +265,7 @@ $(document).ready(function () {
         const textBtn = hideQuestions ? 'Згорнути питання' : 'Інші питання';
         hideQuestions = !hideQuestions;
         text.text(textBtn);
+        $('.load-more .icon').toggleClass('up-arrow');
     })
 
     // CUSTOM SELECT

@@ -60,6 +60,7 @@
     width: 64px;
     height: 64px;
     margin-right: 20px;
+    transition: .35s;
 
     &:before {
       position: absolute;
@@ -76,14 +77,22 @@
       background-size: contain;
       z-index: 1;
     }
-    .text{
+
+    &.up-arrow {
+      transform: rotate(180deg);
+    }
+
+    .text {
       transition: .35s;
     }
   }
 }
-.load-more{
-  width: 190px;
+
+.load-more {
+  width: 245px;
+  font-weight: 700;
 }
+
 .to-top {
   position: fixed;
   bottom: 68px;
@@ -148,7 +157,7 @@
     width: 30px;
     height: 30px;
   }
-  .to-top{
+  .to-top {
     right: 10px;
   }
 }
@@ -156,6 +165,7 @@
 @include respond-to($sm) {
   .load-more {
     font-size: 12px;
+    width: 190px;
 
     .icon {
       width: 30px;
