@@ -270,7 +270,6 @@ function getSlideCaption(slider) {
     $('html, body').animate({scrollTop: 0}, '600');
   });
 //BAGUETTE BOX
-  window.addEventListener('load', function() {
     baguetteBox.run('.gallery', {
       buttons: 'auto', // arrows navigation
       noScrollbars: false,
@@ -281,7 +280,6 @@ function getSlideCaption(slider) {
       animation: 'fadeIn',
       overlayBackgroundColor: 'rgba (1,1,1, .25)'
     });
-  });
 
   //CARD HEIGHT
   function setEqualHeight() {
