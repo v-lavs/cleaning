@@ -26,10 +26,14 @@
   &__header {
     position: relative;
     background-color: $white;
-    font-weight: 700;
     font-size: 22px;
-    letter-spacing: -0.02em;
     padding: 32px;
+  }
+
+  &__heading {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-size: inherit;
   }
 
   .space {
@@ -131,10 +135,9 @@
   }
 
   @include respond-to($lg) {
-    &_details-servisec {
-      .modal__header {
-        font-size: 18px;
-      }
+    .modal__header {
+      font-size: 18px;
+      line-height: 24px;
     }
   }
   @include respond-to($md) {
@@ -167,7 +170,7 @@
     max-width: 360px;
     width: 100%;
     &_details-servisec {
-      .modal__header h3{
+      .modal__header h3 {
         font-size: 18px;
       }
     }
@@ -189,6 +192,7 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
+
   .circle {
     stroke-dasharray: 100;
     stroke-dashoffset: 100;
@@ -200,6 +204,7 @@
     stroke-dashoffset: 50;
     opacity: 0;
   }
+
   &.show {
     .thanks-page__content {
       transition: .35s;

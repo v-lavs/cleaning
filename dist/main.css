@@ -569,10 +569,14 @@ body.modal-open {
 .modal__header {
   position: relative;
   background-color: #ffffff;
-  font-weight: 700;
   font-size: 22px;
-  letter-spacing: -0.02em;
   padding: 32px;
+}
+
+.modal__heading {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: inherit;
 }
 
 .modal .space {
@@ -1852,8 +1856,9 @@ body.modal-open {
     padding: 20px 0;
   }
 
-  .modal_details-servisec .modal__header {
+  .modal .modal__header {
     font-size: 18px;
+    line-height: 24px;
   }
 
   .calculator .fieldboxes {
