@@ -22190,14 +22190,12 @@ $(document).ready(function () {
     $('.popupTrigger2').click(function (e) {
         e.preventDefault();
         $('#popupOrder').addClass('modal_active');
-        $('.thanks-page').addClass('show');
         $('.backdrop').fadeIn();
         $('body').addClass('modal-open');
     })
 
     $('#closePopup,  #overlay').click(function () {
         $('#popupOrder').removeClass('modal_active');
-        $('.thanks-page').removeClass('show');
         $('.backdrop').fadeOut();
         $('body').removeClass('modal-open');
     });
@@ -22276,29 +22274,29 @@ $(document).ready(function () {
     //ACCORDION
     $('#accordion .panel__heading').on('click', function () {
         if ($(this).hasClass('open')) {
-            $(this).removeClass('open')
+            $(this).removeClass('open');
             $(this)
                 .siblings('.panel-collapse')
-                .slideUp(500)
+                .slideUp(500);
             $('#accordion .panel__heading .open-panel')
                 .removeClass('open-panel:before')
                 .addClass('open-panel')
         } else {
             $('#accordion .panel__heading .open-panel')
                 .removeClass('open-panel:before')
-                .addClass('open-panel')
+                .addClass('open-panel');
             $(this)
                 .find('open-panel')
                 .removeClass('open-panel')
-                .addClass('open-panel:before')
-            $('#accordion .panel__heading').removeClass('open')
-            $(this).addClass('open')
-            $('.panel-collapse').slideUp(500)
+                .addClass('open-panel:before');
+            $('#accordion .panel__heading').removeClass('open');
+            $(this).addClass('open');
+            $('.panel-collapse').slideUp(500);
             $(this)
                 .siblings('.panel-collapse')
                 .slideDown(500)
         }
-    })
+    });
 
     //SWIPER-SLIDER
     let swiperGallery = new Swiper('.gallery__slider', {
@@ -22322,7 +22320,7 @@ $(document).ready(function () {
                 slidesPerGroup: 3,
             },
         }
-    })
+    });
 
 //SWIPER-SLIDER
 
@@ -22388,7 +22386,7 @@ $(document).ready(function () {
         hideQuestions = !hideQuestions;
         text.text(textBtn);
         $('.load-more .icon').toggleClass('up-arrow');
-    })
+    });
 
     // CUSTOM SELECT
 
@@ -22447,4 +22445,4 @@ $(document).ready(function () {
             setEqualHeight();
         }
     })
-})
+});
